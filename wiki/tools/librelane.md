@@ -35,3 +35,4 @@ It includes a reference flow, named Classic, that uses only open-source tools an
 - [Timing Closure](../concepts/timing-closure.md)
 - [ASIC Design Flow](../concepts/asic-design-flow.md)
 - [PDK](../concepts/pdk.md)
+- [Verilator](verilator.md)

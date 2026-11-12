@@ -2,7 +2,7 @@
 title: RTL Design
 type: stage
 order: 2
-sources: [S2, S5]
+sources: [S2, S5, S7]
 updated: 2026-11-12
 ---
 
@@ -29,9 +29,12 @@ The design is written down in a hardware description language such as Verilog. F
 - Latched logic is often considered bad style and is in many cases the result of careless coding, so many synthesis tools warn when they generate it. [S5 §Behavioural modelling]
 - Tool scripts and settings count as design sources and belong under version control with the code. [S5 §Script-based synthesis flows]
 
+
 ## Checks
 
+- [Verilator](../tools/verilator.md) lints the SystemVerilog code it is given as part of its normal use. [S7 §Overview]
 - The reference flow lints the RTL before doing anything else: its first step directories are a lint run followed by checkers for lint errors and warnings. [S2 §Run directory]
+
 
 ## Related pages
 
@@ -40,3 +43,4 @@ The design is written down in a hardware description language such as Verilog. F
 - [Logic Synthesis](logic-synthesis.md)
 - [RTL](../concepts/rtl.md)
 - [Levels of Abstraction](../concepts/levels-of-abstraction.md)
+- [Verilator](../tools/verilator.md)

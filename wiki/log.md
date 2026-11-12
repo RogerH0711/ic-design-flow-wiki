@@ -194,3 +194,15 @@ is told in the hand-over.
 
 Recorded in `formats/lef.md`. S4: Layout Exchange Format. S6: Library
 Exchange Format.
+
+## [2026-11-12] ingest | S7 Verilator User's Guide: Overview and Simulating
+
+- Created (3): source page; tool `verilator`; concept `coverage`.
+- Updated (4): stages `functional-verification`, `rtl-design`; tool
+  `librelane` (link); and `index.md`.
+- Gaps closed: `functional-verification` Outputs and Checks.
+- New gap: `coverage` Definition. S7 lists kinds of coverage without saying
+  what coverage is. Expected from S10.
+- Not used: benchmarking, profiling, and save/restore sections.
+- Conflicts: none.
+

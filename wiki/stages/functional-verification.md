@@ -2,7 +2,7 @@
 title: Functional Verification
 type: stage
 order: 3
-sources: [S2, S3, S5]
+sources: [S2, S3, S5, S7]
 updated: 2026-11-12
 ---
 
@@ -18,7 +18,7 @@ Functional verification makes sure that the design behaves as its requirements s
 
 ## Outputs
 
-_Not yet covered by an ingested source._
+- With Verilator, if enabled, the simulation executable can produce waveform traces of the design for viewing and [coverage](../concepts/coverage.md) data for later analysis. [S7 §Overview]
 
 ## What happens
 
@@ -33,7 +33,7 @@ _Not yet covered by an ingested source._
 
 ## Checks
 
-_Not yet covered by an ingested source._
+- After all tests have run, Verilator's coverage command produces a source listing annotated with coverage details, in which the lines it believes need more coverage are marked. [S7 §Coverage Collection]
 
 ## Related pages
 
@@ -42,3 +42,5 @@ _Not yet covered by an ingested source._
 - [Logic Synthesis](logic-synthesis.md)
 - [Netlist](../concepts/netlist.md)
 - [SDF](../formats/sdf.md)
+- [Coverage](../concepts/coverage.md)
+- [Verilator](../tools/verilator.md)

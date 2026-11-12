@@ -40,6 +40,7 @@ In flow order. Stage 1 (specification) has no page yet.
 - [Tape-out](concepts/tape-out.md) — sending the finished design to be manufactured.
 - [Levels of Abstraction](concepts/levels-of-abstraction.md) — from system level down to transistors.
 - [Technology Mapping](concepts/technology-mapping.md) — converting a design into cells the target really has.
+- [Coverage](concepts/coverage.md) — measuring how much of a design the tests exercised.
 
 ## Tools
 
@@ -50,6 +51,7 @@ In flow order. Stage 1 (specification) has no page yet.
 - [OpenROAD](tools/openroad.md) — the application that carries out the automated flow.
 - [OpenROAD Flow Scripts](tools/openroad-flow-scripts.md) — scripts that run the whole flow with one command.
 - [Yosys](tools/yosys.md) — the synthesis tool.
+- [Verilator](tools/verilator.md) — compiles a design into an executable simulation model; also lints.
 
 ## Formats
 
@@ -70,3 +72,4 @@ In flow order. Stage 1 (specification) has no page yet.
 - [S4: LibreLane Glossary](sources/s4-librelane-glossary.md) — short definitions of terms, formats, and tools.
 - [S5: Yosys, A Primer on Digital Circuit Synthesis](sources/s5-yosys-synthesis-primer.md) — abstraction levels and what synthesis does.
 - [S6: SkyWater SKY130 PDK, Libraries and File Types](sources/s6-skywater-pdk-libraries-file-types.md) — what a PDK contains.
+- [S7: Verilator User's Guide, Overview and Simulating](sources/s7-verilator-overview-simulating.md) — what Verilator does and how coverage is collected.

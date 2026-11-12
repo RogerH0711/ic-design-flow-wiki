@@ -19,7 +19,7 @@ The newcomers' tutorial lists five broad steps. [S2 §Newcomers' Tutorial]
 4. Physical implementation: the netlist is turned into a layout through [floorplanning](../stages/floorplanning.md), [placement](../stages/placement.md), [clock tree synthesis](../stages/clock-tree-synthesis.md), and [routing](../stages/routing.md). [S2 §Newcomers' Tutorial]
 5. [Signoff](../stages/signoff.md): final checks before the layout is sent for manufacturing. [S2 §Newcomers' Tutorial]
 
-Also called: PnR, Placement and Routing (both for step 4)
+Also called: PnR, Placement and Routing, Place and Route (all for step 4)
 
 ## Why it matters
 

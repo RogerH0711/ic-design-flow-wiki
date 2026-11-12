@@ -21,15 +21,19 @@ In flow order. Stage 1 (specification) has no page yet.
 
 - [ASIC Design Flow](concepts/asic-design-flow.md) — the whole path from idea to fabrication data; start here.
 - [Antenna Violation](concepts/antenna-violation.md) — an antenna ratio above the limit set by the process design kit.
+- [Clock Skew](concepts/clock-skew.md) — the difference in clock arrival time between flip-flops.
 - [Core Utilization and Placement Density](concepts/placement-density.md) — how much of the core is used and how tightly cells are packed.
 - [DRC](concepts/drc.md) — checking the layout against the foundry's manufacturing rules.
 - [IR Drop](concepts/ir-drop.md) — voltage lost in the power grid before it reaches the cells.
 - [LVS](concepts/lvs.md) — checking that layout and schematic are wired the same way.
 - [Netlist](concepts/netlist.md) — the circuit of logic cells produced by synthesis.
 - [PPA](concepts/ppa.md) — area, timing, and power, the three goals of optimization.
+- [Standard Cell Library](concepts/standard-cell-library.md) — the set of cells, in several sizes, that designs are built from.
 - [Static Timing Analysis](concepts/static-timing-analysis.md) — computing arrival and required times on every timing path.
 - [Tap, Endcap, Tie, and Filler Cells](concepts/tap-endcap-tie-filler-cells.md) — cells added for physical reasons, not for logic.
+- [Timing Closure](concepts/timing-closure.md) — changing the design until every timing constraint is met.
 - [Timing Corners](concepts/timing-corners.md) — the extreme conditions under which timing is analyzed.
+- [Timing Paths](concepts/timing-paths.md) — where a path starts and ends, and the four types.
 - [Timing Violations](concepts/timing-violations.md) — setup and hold problems and how the flow reports and repairs them.
 
 ## Tools
@@ -48,9 +52,11 @@ In flow order. Stage 1 (specification) has no page yet.
 - [GDSII](formats/gdsii.md) — the final layout file.
 - [ODB](formats/odb.md) — the database file saved after each sub-step.
 - [SDC](formats/sdc.md) — timing constraints.
+- [SDF](formats/sdf.md) — cell timing data for gate-level simulation.
 - [SPEF](formats/spef.md) — extracted wire parasitics.
 
 ## Sources
 
 - [S1: OpenROAD Flow Scripts Tutorial](sources/s1-orfs-flow-tutorial.md) — a full RTL-to-GDSII run, stage by stage.
 - [S2: LibreLane Newcomers' Tutorial](sources/s2-librelane-newcomers-tutorial.md) — the list of flow steps and the four signoff checks.
+- [S3: LibreLane, Achieving Timing Closure](sources/s3-librelane-timing-closure.md) — setup and hold theory and practical closure tips.

@@ -1,7 +1,7 @@
 ---
 title: LibreLane
 type: tool
-sources: [S2]
+sources: [S2, S3]
 updated: 2026-11-12
 ---
 
@@ -19,6 +19,7 @@ It includes a reference flow, named Classic, that uses only open-source tools an
 - A flow is a sequence of steps. Each step gets its own numbered directory holding its logs, reports, metrics, and outputs. [S2 §Run directory]
 - The state of the design is passed from step to step, so the layout can be opened as it was after any step. [S2 §Run directory]
 - A `final` directory gathers every view of the finished design, together with its metrics. [S2 §Final Results]
+- Its Classic flow attempts timing closure automatically, after clock tree synthesis and after global routing, and assumes a single clock domain. [S3 §Tips for Achieving Timing Closure]
 - Flows can be extended or changed with Python scripts. [S2 §What is LibreLane?]
 
 ## Related pages
@@ -29,4 +30,5 @@ It includes a reference flow, named Classic, that uses only open-source tools an
 - [Magic](magic.md)
 - [Netgen](netgen.md)
 - [Signoff](../stages/signoff.md)
+- [Timing Closure](../concepts/timing-closure.md)
 - [ASIC Design Flow](../concepts/asic-design-flow.md)

@@ -2,7 +2,7 @@
 title: Placement
 type: stage
 order: 6
-sources: [S1]
+sources: [S1, S3]
 updated: 2026-11-12
 ---
 
@@ -33,7 +33,13 @@ Placement puts the standard cells into the core area. How densely they are packe
 - A placement density heat map shows how spread out the cells are. For `ibex`, raising core utilization from 20 to 40 while lowering placement density from 0.60 to 0.50 spreads the cells more widely. [S1 §Defining Placement Density]
 - Counts of slew, capacitance, and fanout violations are compared before and after repair; in the tutorial's example all 31 are fixed. [S1 §Timing Optimization Using repair_design]
 
+## Common problems
+
+- Timing optimization enlarges the design. If more buffer insertion is allowed, rerunning with a lower core utilization is recommended to avoid routing congestion. [S3 §Tips for Achieving Timing Closure]
+
 ## Related pages
+
+- [Timing Closure](../concepts/timing-closure.md)
 
 - [Floorplanning](floorplanning.md)
 - [Clock Tree Synthesis](clock-tree-synthesis.md)

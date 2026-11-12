@@ -10,6 +10,7 @@
     {"use": "clock tree synthesis", "not": ["clock-tree synthesis"], "since": "S2"},
     {"use": "signoff", "not": ["sign-off", "sign off"], "since": "S2"},
     {"use": "tape-out", "not": ["tapeout", "tape out"], "since": "S2"},
-    {"use": "physical implementation", "not": ["physical synthesis", "PnR", "P&R"], "since": "S2"}
+    {"use": "physical implementation", "not": ["physical synthesis", "PnR", "P&R", "place and route"], "since": "S2"},
+    {"use": "standard cell library", "not": ["SCL"], "since": "S3"}
   ]
 }

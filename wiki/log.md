@@ -109,3 +109,19 @@ stage pages; adding an independent faithfulness review to the ingest
 workflow (AGENTS.md section 8, step 6), because the lint passed on the
 first round twice while twelve unfaithful statements had to be caught by
 hand; and extending S7 with the Simulating chapter of the same guide.
+
+## [2026-11-12] ingest | S3 LibreLane: Achieving Timing Closure
+
+- Created (6): source page; concepts `timing-closure`, `timing-paths`,
+  `clock-skew`, `standard-cell-library`; format `sdf`.
+- Updated (8): concepts `timing-violations`, `static-timing-analysis`,
+  `asic-design-flow` (alias); stages `clock-tree-synthesis`, `placement`,
+  `functional-verification`; format `sdc`; tool `librelane`; and `index.md`.
+- Conflicts: none. S3 agrees with S1 that hold repair may be allowed to
+  create setup violations only on request, and with S2 on the STA steps.
+- Terminology: standard cell library (not SCL); "Place and Route" added as
+  a variant of physical implementation.
+- License: the S3 page declares itself CC-BY-SA 4.0, unlike the rest of its
+  repository; noted in `raw/sources.json`.
+- Gaps: none closed; `routing` Inputs still open. New: a general
+  definition of a standard cell library (expected from S4, S6).

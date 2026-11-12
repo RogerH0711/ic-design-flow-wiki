@@ -36,6 +36,7 @@
       "commit": "8494d4fea0ddd9bee12ea5e42a38b59438c2b128",
       "license": "Apache-2.0",
       "license_file": "licenses/librelane-Apache-2.0.txt",
+      "license_note": "The page itself states that it is released under CC-BY-SA 4.0, although the repository license is Apache-2.0. Treat this file as CC-BY-SA 4.0.",
       "web": "https://librelane.readthedocs.io/en/stable/usage/timing_closure/index.html",
       "files": [
         {"path": "docs/source/usage/timing_closure/index.md", "local": "S03-librelane-timing-closure.md"}

@@ -83,7 +83,7 @@
     },
     {
       "id": "S7",
-      "title": "Verilator User's Guide: Overview",
+      "title": "Verilator User's Guide: Overview and Simulating",
       "publisher": "Wilson Snyder and Verilator contributors",
       "repo": "verilator/verilator",
       "commit": "1f9bd2a2d1282351f8089d68d0237dc420fdce6e",
@@ -91,7 +91,8 @@
       "license_file": "licenses/verilator-LGPL-3.0.txt",
       "web": "https://verilator.org/guide/latest/overview.html",
       "files": [
-        {"path": "docs/guide/overview.rst", "local": "S07-verilator-overview.rst"}
+        {"path": "docs/guide/overview.rst", "local": "S07-verilator-overview.rst"},
+        {"path": "docs/guide/simulating.rst", "local": "S07-verilator-simulating.rst"}
       ]
     },
     {

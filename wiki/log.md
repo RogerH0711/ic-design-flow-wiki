@@ -101,3 +101,11 @@ the aliases are listed once on `concepts/asic-design-flow.md`).
 - `tools/yosys.md`, `tools/magic.md`, `formats/gdsii.md`, `formats/def.md`
   What it is: only named so far. Expected from S4, S5, S6.
 - Placement and clock tree synthesis: S2 adds nothing; both rest on S1 only.
+
+## [2026-11-12] decision | Owner review of S1 and S2
+
+The owner read the wiki after two ingests and approved: the division of
+stage pages; adding an independent faithfulness review to the ingest
+workflow (AGENTS.md section 8, step 6), because the lint passed on the
+first round twice while twelve unfaithful statements had to be caught by
+hand; and extending S7 with the Simulating chapter of the same guide.

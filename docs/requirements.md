@@ -35,7 +35,7 @@
 | S4 | LibreLane Glossary | 名詞定義 | Apache-2.0 |
 | S5 | Yosys: A primer on digital circuit synthesis | 抽象層級、synthesis | ISC |
 | S6 | SkyWater SKY130 PDK: Libraries、File Types | PDK、standard cell、檔案格式 | Apache-2.0 |
-| S7 | Verilator User's Guide: Overview | RTL 模擬 | LGPL-3.0-only OR Artistic-2.0 |
+| S7 | Verilator User's Guide: Overview、Simulating（11/12 Roger 決定加入 Simulating） | RTL 模擬 | LGPL-3.0-only OR Artistic-2.0 |
 | S8 | OpenTitan: Designing Hardware | 規格制定、設計階段 | Apache-2.0 |
 | S9 | lowRISC Verilog Coding Style Guide | RTL 撰寫 | CC-BY-4.0 |
 | S10 | Design Verification Methodology within OpenTitan | 驗證方法、coverage | Apache-2.0 |

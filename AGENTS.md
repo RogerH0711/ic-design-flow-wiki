@@ -119,15 +119,28 @@ all count.
    updated, conflicts found, and gaps left open.
 5. Run `python3 scripts/lint_wiki.py --record "ingest S<n>"`. Fix only what
    the report lists and rerun. Stop after 3 failed rounds and ask.
-6. Commit: one source, one commit, message `Ingest S<n>: <title>`.
+6. Independent review (from S3 on). Start a fresh sub-agent that has not seen
+   the ingest and give it only `workflows/ingest-review.md`, the raw file(s)
+   of this source, and the list of pages touched. It checks every statement
+   that cites this source against the cited section and writes
+   `docs/checks/reviews/S<n>.md`. The agent that wrote the pages must not
+   review them. Fix every finding marked UNSUPPORTED or WRONG-SECTION, rerun
+   the lint, and record the fixes in the same review file. If the reviewer
+   and the writer disagree, keep both views in the file and ask the owner.
+7. Commit: one source, one commit, message `Ingest S<n>: <title>`.
 
-After the first two sources, stop and let the owner review before continuing.
+The first two sources (S1, S2) were ingested before step 6 existed. The
+owner read the result and raised no problem, but they have had no
+independent review.
 
 ## 9. Definition of done
 
-A change is done when `python3 scripts/lint_wiki.py` exits 0. "I checked it"
-is not verification. The lint covers citations, links and index, page format,
-terminology, English-only text, and raw-file integrity.
+A change is done when `python3 scripts/lint_wiki.py` exits 0 and, for an
+ingest, the independent review has no open finding. "I checked it" is not
+verification. The lint covers citations, links and index, page format,
+terminology, English-only text, and raw-file integrity; it cannot tell
+whether a statement is faithful to the section it cites, which is what the
+review is for.
 
 ## 10. Slides
 

@@ -1,0 +1,4 @@
+{
+  "_note": "One spelling per concept. scripts/lint_wiki.py fails on any spelling listed under 'not' (outside citations, inline code, and 'Also called:' lines).",
+  "terms": []
+}

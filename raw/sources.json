@@ -1,0 +1,160 @@
+{
+  "_note": "Manifest of every raw source. Files are verbatim copies pinned to an upstream commit; scripts/fetch_raw.py downloads and verifies them. Never edit files in raw/ by hand.",
+  "retrieved": "2026-11-12",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "OpenROAD Flow Scripts Tutorial",
+      "publisher": "The OpenROAD Project",
+      "repo": "The-OpenROAD-Project/OpenROAD-flow-scripts",
+      "commit": "a47d4fdc6534cb3cdfdd9ff76737a899a5bb2ee0",
+      "license": "BSD-3-Clause",
+      "license_note": "Stated in the upstream README, section 'License'. The repository has no standalone license file at this commit.",
+      "web": "https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html",
+      "files": [
+        {"path": "docs/tutorials/FlowTutorial.md", "local": "S01-orfs-flow-tutorial.md"}
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "LibreLane Newcomers' Tutorial",
+      "publisher": "LibreLane contributors",
+      "repo": "librelane/librelane",
+      "commit": "8494d4fea0ddd9bee12ea5e42a38b59438c2b128",
+      "license": "Apache-2.0",
+      "license_file": "licenses/librelane-Apache-2.0.txt",
+      "web": "https://librelane.readthedocs.io/en/stable/getting_started/newcomers/index.html",
+      "files": [
+        {"path": "docs/source/getting_started/newcomers/index.md", "local": "S02-librelane-newcomers-tutorial.md"}
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "LibreLane: Achieving Timing Closure",
+      "publisher": "LibreLane contributors",
+      "repo": "librelane/librelane",
+      "commit": "8494d4fea0ddd9bee12ea5e42a38b59438c2b128",
+      "license": "Apache-2.0",
+      "license_file": "licenses/librelane-Apache-2.0.txt",
+      "web": "https://librelane.readthedocs.io/en/stable/usage/timing_closure/index.html",
+      "files": [
+        {"path": "docs/source/usage/timing_closure/index.md", "local": "S03-librelane-timing-closure.md"}
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "LibreLane Glossary",
+      "publisher": "LibreLane contributors",
+      "repo": "librelane/librelane",
+      "commit": "8494d4fea0ddd9bee12ea5e42a38b59438c2b128",
+      "license": "Apache-2.0",
+      "license_file": "licenses/librelane-Apache-2.0.txt",
+      "web": "https://librelane.readthedocs.io/en/stable/glossary.html",
+      "files": [
+        {"path": "docs/source/glossary.md", "local": "S04-librelane-glossary.md"}
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Yosys: A primer on digital circuit synthesis",
+      "publisher": "YosysHQ",
+      "repo": "YosysHQ/yosys",
+      "commit": "0865903d9f040a503cf67989c2d3ba9494e2625e",
+      "license": "ISC",
+      "license_file": "licenses/yosys-ISC.txt",
+      "web": "https://yosyshq.readthedocs.io/projects/yosys/en/latest/appendix/primer.html",
+      "files": [
+        {"path": "docs/source/appendix/primer.rst", "local": "S05-yosys-synthesis-primer.rst"}
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "SkyWater SKY130 PDK: Libraries and File Types",
+      "publisher": "SkyWater PDK Authors",
+      "repo": "google/skywater-pdk",
+      "commit": "7198cf647113f56041e02abf3eb623692820c5e1",
+      "license": "Apache-2.0",
+      "license_file": "licenses/skywater-pdk-Apache-2.0.txt",
+      "web": "https://skywater-pdk.readthedocs.io/en/main/contents.html",
+      "files": [
+        {"path": "docs/contents/libraries.rst", "local": "S06-skywater-pdk-libraries.rst"},
+        {"path": "docs/contents/file_types.rst", "local": "S06-skywater-pdk-file-types.rst"}
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Verilator User's Guide: Overview",
+      "publisher": "Wilson Snyder and Verilator contributors",
+      "repo": "verilator/verilator",
+      "commit": "1f9bd2a2d1282351f8089d68d0237dc420fdce6e",
+      "license": "LGPL-3.0-only OR Artistic-2.0",
+      "license_file": "licenses/verilator-LGPL-3.0.txt",
+      "web": "https://verilator.org/guide/latest/overview.html",
+      "files": [
+        {"path": "docs/guide/overview.rst", "local": "S07-verilator-overview.rst"}
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "OpenTitan: Designing Hardware",
+      "publisher": "lowRISC contributors (OpenTitan)",
+      "repo": "lowRISC/opentitan",
+      "commit": "675b042dca6fa4fa30fecc52bcea85b1a57d763a",
+      "license": "Apache-2.0",
+      "license_file": "licenses/opentitan-Apache-2.0.txt",
+      "web": "https://opentitan.org/book/doc/contributing/hw/design.html",
+      "files": [
+        {"path": "doc/contributing/hw/design.md", "local": "S08-opentitan-designing-hardware.md"}
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "lowRISC Verilog Coding Style Guide",
+      "publisher": "lowRISC contributors",
+      "repo": "lowRISC/style-guides",
+      "commit": "9c15ff5dce23eef969e00ab3715153967419eadd",
+      "license": "CC-BY-4.0",
+      "license_file": "licenses/lowrisc-style-guides-CC-BY-4.0.txt",
+      "web": "https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md",
+      "files": [
+        {"path": "VerilogCodingStyle.md", "local": "S09-lowrisc-verilog-style-guide.md"}
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Design Verification Methodology within OpenTitan",
+      "publisher": "lowRISC contributors (OpenTitan)",
+      "repo": "lowRISC/opentitan",
+      "commit": "675b042dca6fa4fa30fecc52bcea85b1a57d763a",
+      "license": "Apache-2.0",
+      "license_file": "licenses/opentitan-Apache-2.0.txt",
+      "web": "https://opentitan.org/book/doc/contributing/dv/methodology/index.html",
+      "files": [
+        {"path": "doc/contributing/dv/methodology/README.md", "local": "S10-opentitan-dv-methodology.md"}
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "cocotb: Writing Testbenches",
+      "publisher": "cocotb contributors",
+      "repo": "cocotb/cocotb",
+      "commit": "e85fae957d5c93894740b164ea9cc6567015b954",
+      "commit_note": "Tag v2.1.0, the release behind the 'stable' documentation.",
+      "license": "BSD-3-Clause",
+      "license_file": "licenses/cocotb-BSD-3-Clause.txt",
+      "web": "https://docs.cocotb.org/en/stable/writing_testbenches.html",
+      "files": [
+        {"path": "docs/source/writing_testbenches.rst", "local": "S11-cocotb-writing-testbenches.rst"}
+      ]
+    }
+  ],
+  "license_files": [
+    {"repo": "librelane/librelane", "commit": "8494d4fea0ddd9bee12ea5e42a38b59438c2b128", "path": "License", "local": "licenses/librelane-Apache-2.0.txt"},
+    {"repo": "YosysHQ/yosys", "commit": "0865903d9f040a503cf67989c2d3ba9494e2625e", "path": "COPYING", "local": "licenses/yosys-ISC.txt"},
+    {"repo": "google/skywater-pdk", "commit": "7198cf647113f56041e02abf3eb623692820c5e1", "path": "LICENSE", "local": "licenses/skywater-pdk-Apache-2.0.txt"},
+    {"repo": "verilator/verilator", "commit": "1f9bd2a2d1282351f8089d68d0237dc420fdce6e", "path": "LICENSE", "local": "licenses/verilator-LGPL-3.0.txt"},
+    {"repo": "lowRISC/opentitan", "commit": "675b042dca6fa4fa30fecc52bcea85b1a57d763a", "path": "LICENSE", "local": "licenses/opentitan-Apache-2.0.txt"},
+    {"repo": "lowRISC/style-guides", "commit": "9c15ff5dce23eef969e00ab3715153967419eadd", "path": "LICENSE", "local": "licenses/lowrisc-style-guides-CC-BY-4.0.txt"},
+    {"repo": "cocotb/cocotb", "commit": "e85fae957d5c93894740b164ea9cc6567015b954", "path": "LICENSE", "local": "licenses/cocotb-BSD-3-Clause.txt"}
+  ]
+}

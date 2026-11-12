@@ -1,4 +1,11 @@
 {
   "_note": "One spelling per concept. scripts/lint_wiki.py fails on any spelling listed under 'not' (outside citations, inline code, and 'Also called:' lines).",
-  "terms": []
+  "terms": [
+    {"use": "GDSII", "not": ["GDS", "GDS2", "GDS II"], "since": "S1"},
+    {"use": "detailed routing", "not": ["detail routing"], "since": "S1"},
+    {"use": "detailed router", "not": ["detail router"], "since": "S1"},
+    {"use": "tap cell", "not": ["tapcell"], "since": "S1"},
+    {"use": "filler cell", "not": ["fill cell"], "since": "S1"},
+    {"use": "floorplanning", "not": ["floor planning", "floor-planning"], "since": "S1"}
+  ]
 }

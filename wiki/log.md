@@ -151,3 +151,29 @@ implementation step. S4: placement and routing only.
 
 The `.lib` page is named Dotlib, the word S4 uses. A first draft named it
 Liberty, a name that appears in no ingested source; corrected before review.
+
+## [2026-11-12] ingest | S5 Yosys: A primer on digital circuit synthesis
+
+- Created (3): source page; concepts `levels-of-abstraction`,
+  `technology-mapping`.
+- Updated (8): stages `logic-synthesis`, `rtl-design`,
+  `functional-verification`; concepts `rtl`, `netlist`, `asic-design-flow`;
+  tool `yosys`; and `index.md`.
+- Gaps closed: `rtl-design` Inputs and What happens.
+- Not used: the section on compiler methods (lexing, parsing), below
+  overview depth.
+- Terminology: behavioral (S5 writes behavioural), combinational (S5 writes
+  combinatorial).
+
+## [2026-11-12] conflict | S4 and S5 place behavioral description differently
+
+Recorded in `concepts/rtl.md`. S4 treats behavioral models and RTL as one
+level; S5 has a behavioral level above RTL.
+
+## [2026-11-12] decision | Lint bug fixed during S5
+
+`scripts/lint_wiki.py` treated a reStructuredText heading underline made of
+`~` as a markdown code fence, so it could not see about half of the
+headings in `.rst` sources and reported 22 valid S5 citations as invalid.
+Fence handling now applies to `.md` files only. No rule changed. The owner
+is told in the hand-over.

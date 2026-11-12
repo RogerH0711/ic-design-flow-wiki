@@ -1,7 +1,7 @@
 ---
 title: ASIC Design Flow
 type: concept
-sources: [S1, S2, S4]
+sources: [S1, S2, S4, S5]
 updated: 2026-11-12
 ---
 
@@ -34,6 +34,9 @@ Also called: PnR, Placement and Routing, Place and Route (all for step 4)
 
 - Placement determines the positions of standard cells and macros in the layout, and routing determines the shapes of the connections between them; each result is checked for legality. [S4 §PnR]
 
+- The flow is never run just once. A late change of requirements, or an analysis at a low level such as gate-level timing, sends the design back for another iteration. [S5 §Script-based synthesis flows]
+- So that automatic steps can be repeated exactly, the tools are driven by scripts. [S5 §Script-based synthesis flows]
+
 ## Source differences
 
 - Physical implementation: S2 treats floorplanning, placement, clock tree synthesis, and routing as sub-steps of one step [S2 §Newcomers' Tutorial], while S1 treats them as separate stages of the flow, each cleaned and rerun on its own. [S1 §Design Goals]
@@ -58,3 +61,4 @@ Also called: PnR, Placement and Routing, Place and Route (all for step 4)
 - [RTL](rtl.md)
 - [PDK](pdk.md)
 - [Tape-out](tape-out.md)
+- [Levels of Abstraction](levels-of-abstraction.md)

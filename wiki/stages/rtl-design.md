@@ -2,7 +2,7 @@
 title: RTL Design
 type: stage
 order: 2
-sources: [S2]
+sources: [S2, S5]
 updated: 2026-11-12
 ---
 
@@ -16,7 +16,7 @@ The design is written down in a hardware description language such as Verilog. F
 
 ## Inputs
 
-_Not yet covered by an ingested source._
+- A higher-level model of the desired function: a design usually starts as a high-level or system-level simulation, which is then rewritten by hand into a synthesizable description. [S5 §Script-based synthesis flows]
 
 ## Outputs
 
@@ -24,7 +24,10 @@ _Not yet covered by an ingested source._
 
 ## What happens
 
-_Not yet covered by an ingested source._
+- Only a subset of Verilog can be synthesized; it is defined in its own IEEE standard. [S5 §Features of synthesizable Verilog]
+- Clocked logic is written as code that runs on a clock edge, and synthesis turns it into data path logic followed by flip-flops. [S5 §Behavioural level]
+- Latched logic is often considered bad style and is in many cases the result of careless coding, so many synthesis tools warn when they generate it. [S5 §Behavioural modelling]
+- Tool scripts and settings count as design sources and belong under version control with the code. [S5 §Script-based synthesis flows]
 
 ## Checks
 
@@ -36,3 +39,4 @@ _Not yet covered by an ingested source._
 - [Functional Verification](functional-verification.md)
 - [Logic Synthesis](logic-synthesis.md)
 - [RTL](../concepts/rtl.md)
+- [Levels of Abstraction](../concepts/levels-of-abstraction.md)

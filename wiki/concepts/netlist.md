@@ -1,7 +1,7 @@
 ---
 title: Netlist
 type: concept
-sources: [S2, S4]
+sources: [S2, S4, S5]
 updated: 2026-11-12
 ---
 
@@ -13,6 +13,8 @@ A netlist is a representation of a circuit as pre-hardened elements, that is, st
 
 Synthesis produces it from a hardware description. [S2 §Newcomers' Tutorial]
 
+Seen another way, a netlist is a graph of circuit elements and signals encoded as a list of cells and connections. [S5 §Register-Transfer Level (RTL)]
+
 ## Why it matters
 
 - It is what physical implementation turns into a layout. [S2 §Newcomers' Tutorial]
@@ -23,6 +25,8 @@ Synthesis produces it from a hardware description. [S2 §Newcomers' Tutorial]
 - In LibreLane, a netlist written in Verilog is a gate-level netlist: it models cells under ideal conditions and serves to check logical correctness. A SPICE netlist goes down to the transistor level and can be simulated under various physical conditions. [S4 §Netlist]
 - An engineering change order (ECO) is a manual modification of a netlist that tools have already processed, used for last-minute fixes. [S4 §ECO]
 
+- A netlist written in Verilog uses only constants, wire and port declarations, assignments of signals to signals, and cell instantiations; many tools late in the synthesis chain accept nothing else. [S5 §Structural Verilog]
+
 ## Related pages
 
 - [Logic Synthesis](../stages/logic-synthesis.md)
@@ -31,3 +35,5 @@ Synthesis produces it from a hardware description. [S2 §Newcomers' Tutorial]
 - [LVS](lvs.md)
 - [RTL](rtl.md)
 - [Standard Cell Library](standard-cell-library.md)
+- [Technology Mapping](technology-mapping.md)
+- [Levels of Abstraction](levels-of-abstraction.md)

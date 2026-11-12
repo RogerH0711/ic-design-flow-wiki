@@ -38,6 +38,8 @@ In flow order. Stage 1 (specification) has no page yet.
 - [PDK](concepts/pdk.md) — the files that model a fabrication process for the design tools.
 - [RTL](concepts/rtl.md) — the register-transfer level and hardware description languages.
 - [Tape-out](concepts/tape-out.md) — sending the finished design to be manufactured.
+- [Levels of Abstraction](concepts/levels-of-abstraction.md) — from system level down to transistors.
+- [Technology Mapping](concepts/technology-mapping.md) — converting a design into cells the target really has.
 
 ## Tools
 
@@ -66,3 +68,4 @@ In flow order. Stage 1 (specification) has no page yet.
 - [S2: LibreLane Newcomers' Tutorial](sources/s2-librelane-newcomers-tutorial.md) — the list of flow steps and the four signoff checks.
 - [S3: LibreLane, Achieving Timing Closure](sources/s3-librelane-timing-closure.md) — setup and hold theory and practical closure tips.
 - [S4: LibreLane Glossary](sources/s4-librelane-glossary.md) — short definitions of terms, formats, and tools.
+- [S5: Yosys, A Primer on Digital Circuit Synthesis](sources/s5-yosys-synthesis-primer.md) — abstraction levels and what synthesis does.

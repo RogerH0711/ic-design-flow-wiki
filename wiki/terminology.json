@@ -12,6 +12,8 @@
     {"use": "tape-out", "not": ["tapeout", "tape out"], "since": "S2"},
     {"use": "physical implementation", "not": ["physical synthesis", "PnR", "P&R", "place and route"], "since": "S2"},
     {"use": "standard cell library", "not": ["SCL"], "since": "S3"},
-    {"use": "PDK", "not": ["process development kit"], "since": "S4"}
+    {"use": "PDK", "not": ["process development kit"], "since": "S4"},
+    {"use": "behavioral", "not": ["behavioural"], "since": "S5"},
+    {"use": "combinational", "not": ["combinatorial"], "since": "S5"}
   ]
 }

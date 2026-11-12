@@ -74,7 +74,8 @@ def raw_sections(path: Path) -> set:
     fence = None  # "code" or "glossary"
     for i, line in enumerate(lines):
         stripped = line.strip()
-        if stripped.startswith("```") or stripped.startswith("~~~"):
+        # Fences exist only in markdown; in rst a "~~~~" line is a heading underline.
+        if path.suffix == ".md" and (stripped.startswith("```") or stripped.startswith("~~~")):
             if fence is None:
                 fence = "glossary" if "{glossary}" in stripped else "code"
             else:

@@ -2,7 +2,7 @@
 title: Floorplanning
 type: stage
 order: 5
-sources: [S1]
+sources: [S1, S2]
 updated: 2026-11-12
 ---
 
@@ -27,6 +27,7 @@ Its six logs name the sub-steps: `2_1_floorplan`, `2_2_floorplan_io`, `2_3_tdms_
 
 1. The floorplan is initialized. One tutorial example sets a die area of 1000 by 1000 microns with a core area inset by 100 microns on each side. [S1 §Floorplan Initialization Based On Core And Die Area]
 2. I/O pins are placed on the die boundary, on the routing track grid, so that net wirelength is kept small; each pin gets a metal shape. [S1 §IO Pin Placement]
+   When the block will later sit inside a larger design, its pins should instead be assigned to the sides that suit the top-level connections, which is done with a pin order file. [S2 §Adding custom pin placement configuration]
 3. For a full chip, I/O cells are placed around the periphery of the design and matched to the I/O cells in the netlist. [S1 §Chip Level IO Pad Placement]
 4. Macros are placed; a halo of empty space around them leaves room for routing. [S1 §Macro Placement With Halo Spacing]
 5. Tap cells and endcap cells are inserted after macro placement and power rail creation. [S1 §Tapcell insertion]
@@ -41,6 +42,7 @@ Its six logs name the sub-steps: `2_1_floorplan`, `2_2_floorplan_io`, `2_3_tdms_
 ## Related pages
 
 - [Logic Synthesis](logic-synthesis.md)
+- [ASIC Design Flow](../concepts/asic-design-flow.md)
 - [Placement](placement.md)
 - [Core Utilization and Placement Density](../concepts/placement-density.md)
 - [IR Drop](../concepts/ir-drop.md)

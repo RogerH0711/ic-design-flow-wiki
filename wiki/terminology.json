@@ -6,6 +6,10 @@
     {"use": "detailed router", "not": ["detail router"], "since": "S1"},
     {"use": "tap cell", "not": ["tapcell"], "since": "S1"},
     {"use": "filler cell", "not": ["fill cell"], "since": "S1"},
-    {"use": "floorplanning", "not": ["floor planning", "floor-planning"], "since": "S1"}
+    {"use": "floorplanning", "not": ["floor planning", "floor-planning"], "since": "S1"},
+    {"use": "clock tree synthesis", "not": ["clock-tree synthesis"], "since": "S2"},
+    {"use": "signoff", "not": ["sign-off", "sign off"], "since": "S2"},
+    {"use": "tape-out", "not": ["tapeout", "tape out"], "since": "S2"},
+    {"use": "physical implementation", "not": ["physical synthesis", "PnR", "P&R"], "since": "S2"}
   ]
 }

@@ -2,7 +2,7 @@
 title: Logic Synthesis
 type: stage
 order: 4
-sources: [S1]
+sources: [S1, S2]
 updated: 2026-11-12
 ---
 
@@ -10,9 +10,9 @@ updated: 2026-11-12
 
 ## Purpose
 
-Synthesis is the first stage of the automated RTL-to-GDSII flow. [S1 §Running The Automated RTL-to-GDS Flow]
+Synthesis converts the hardware description of the design into a [netlist](../concepts/netlist.md), a circuit built from logic cells. [S2 §Newcomers' Tutorial]
 
-_Not yet covered by an ingested source._
+It is the first stage of the automated RTL-to-GDSII flow. [S1 §Running The Automated RTL-to-GDS Flow]
 
 ## Inputs
 
@@ -34,11 +34,16 @@ _Not yet covered by an ingested source._
 ## Checks
 
 - `synth_check.txt` collects the warnings and errors raised during synthesis. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
+- In the LibreLane reference flow, synthesis is followed directly by checkers for unmapped cells, for synthesis problems, and for assign statements left in the netlist. [S2 §Run directory]
 - The effect of an area-oriented synthesis should be judged after [floorplanning](floorplanning.md), because later timing repair enlarges the design to meet timing whatever netlist synthesis produced. [S1 §Area And Timing Optimization]
 
 ## Related pages
 
+- [RTL Design](rtl-design.md)
+- [Functional Verification](functional-verification.md)
 - [Floorplanning](floorplanning.md)
+- [Netlist](../concepts/netlist.md)
+- [ASIC Design Flow](../concepts/asic-design-flow.md)
 - [Yosys](../tools/yosys.md)
 - [SDC](../formats/sdc.md)
 - [PPA](../concepts/ppa.md)

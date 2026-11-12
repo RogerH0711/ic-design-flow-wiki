@@ -1,7 +1,7 @@
 ---
 title: ODB
 type: format
-sources: [S1]
+sources: [S1, S2]
 updated: 2026-11-12
 ---
 
@@ -9,11 +9,11 @@ updated: 2026-11-12
 
 ## What it is
 
-`.odb` is one of the file types the flow leaves in its results directory, next to `.v`, `.sdc`, `.def`, and `.spef` files. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
+An `.odb` file is the current state of the layout, saved in the OpenROAD database format. [S2 §Run directory]
+
+It is one of the file types the flow leaves in its results directory, next to `.v`, `.sdc`, `.def`, and `.spef` files. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
 
 The flow's list of components has a Database entry, documented under the name `odb`. [S1 §Running The Automated RTL-to-GDS Flow]
-
-_Not yet covered by an ingested source._
 
 ## Produced by and used by
 
@@ -22,6 +22,7 @@ _Not yet covered by an ingested source._
 
 ## Related pages
 
+- [DEF](def.md)
 - [Floorplanning](../stages/floorplanning.md)
 - [Placement](../stages/placement.md)
 - [OpenROAD](../tools/openroad.md)

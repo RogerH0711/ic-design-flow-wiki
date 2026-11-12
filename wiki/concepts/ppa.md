@@ -19,6 +19,7 @@ PPA is the shorthand the flow tutorial uses for the three goals a design is opti
 
 ## Related pages
 
+- [ASIC Design Flow](asic-design-flow.md)
 - [Logic Synthesis](../stages/logic-synthesis.md)
 - [Layout Finishing](../stages/layout-finishing.md)
 - [Timing Violations](timing-violations.md)

@@ -41,3 +41,63 @@ tapcell), filler cell (not fill cell), floorplanning.
   names them. Expected from S4, S5, S6.
 - Stages 1–3 (specification, RTL design, functional verification) have no
   page: S1 starts from finished RTL. Expected from S8–S11.
+
+## [2026-11-12] ingest | S2 LibreLane Newcomers' Tutorial
+
+- Created (15): source page `sources/s2-librelane-newcomers-tutorial.md`;
+  stages `rtl-design`, `functional-verification`, `signoff`; concepts
+  `asic-design-flow`, `netlist`, `drc`, `lvs`, `static-timing-analysis`,
+  `timing-corners`; tools `librelane`, `klayout`, `magic`, `netgen`;
+  format `def`.
+- Updated (13): stages `logic-synthesis`, `floorplanning`, `routing`,
+  `layout-finishing`; concepts `timing-violations`, `antenna-violation`,
+  `ppa`; tools `openroad`, `yosys`; formats `gdsii`, `sdc`, `odb`; and
+  `index.md`.
+- Gaps closed: `logic-synthesis` Purpose, `timing-violations` Definition,
+  `antenna-violation` Why it matters, `odb` What it is.
+
+## [2026-11-12] conflict | S1 and S2 divide the flow differently
+
+Recorded in `concepts/asic-design-flow.md`, Source differences.
+
+- S2 has one physical implementation step with four sub-steps; S1 has four
+  separate stages.
+- S2 ends with a signoff step; S1 has no such stage and ends with layout
+  generation.
+- S2 starts at design entry; S1 starts from finished RTL.
+
+## [2026-11-12] conflict | S1 and S2 place DRC at different points
+
+Recorded in `concepts/drc.md`. S2: a signoff step with two tools. S1: a
+report at the end of detailed routing.
+
+## [2026-11-12] conflict | S1 and S2 word the antenna ratio differently
+
+Recorded in `concepts/antenna-violation.md`. S1: gate area to gate oxide
+area. S2: charge-collecting area to thin-oxide area.
+
+## [2026-11-12] decision | How stage pages are divided (needs owner review)
+
+Stage pages keep S1's finer division (floorplanning, placement, clock tree
+synthesis, routing as four pages) and add S2's design entry, functional
+verification, and signoff as pages of their own. Neither source is declared
+right; the difference stays visible on `concepts/asic-design-flow.md`.
+`layout-finishing` (S1) and `signoff` (S2) are separate pages for now.
+
+## [2026-11-12] decision | Terminology after S2
+
+Added: clock tree synthesis (not clock-tree synthesis), signoff, tape-out,
+physical implementation (S2 also writes Layout/Physical Synthesis and PnR;
+the aliases are listed once on `concepts/asic-design-flow.md`).
+
+## [2026-11-12] gap | Open after S2
+
+- Stage 1, specification: still no page. S2 only mentions requirements in
+  passing. Expected from S8.
+- `stages/rtl-design.md` Inputs and What happens. Expected from S8, S9.
+- `stages/functional-verification.md` Outputs and Checks. Expected from S7,
+  S10, S11.
+- `stages/routing.md` Inputs: still open.
+- `tools/yosys.md`, `tools/magic.md`, `formats/gdsii.md`, `formats/def.md`
+  What it is: only named so far. Expected from S4, S5, S6.
+- Placement and clock tree synthesis: S2 adds nothing; both rest on S1 only.

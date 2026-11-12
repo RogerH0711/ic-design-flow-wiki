@@ -2,7 +2,7 @@
 title: Layout Finishing
 type: stage
 order: 9
-sources: [S1]
+sources: [S1, S2]
 updated: 2026-11-12
 ---
 
@@ -23,6 +23,7 @@ Its logs are `6_1_merge.log` and `6_report.log`. [S1 §Viewing Results And Logs]
 
 - `6_final.gds`, the final layout in [GDSII](../formats/gdsii.md) form. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
 - `6_final.odb`, `6_final.sdc`, `6_final.v`, and `6_final.spef`. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
+- The LibreLane reference flow collects its finished views in a `final` directory, one sub-directory per format (among them `gds`, `def`, `lef`, `lib`, `sdc`, `sdf`, `spef`, and `spice`), with the final metrics alongside. [S2 §Final Results]
 
 ## What happens
 
@@ -39,6 +40,8 @@ Its logs are `6_1_merge.log` and `6_report.log`. [S1 §Viewing Results And Logs]
 ## Related pages
 
 - [Routing](routing.md)
+- [Signoff](signoff.md)
+- [ASIC Design Flow](../concepts/asic-design-flow.md)
 - [PPA](../concepts/ppa.md)
 - [Timing Violations](../concepts/timing-violations.md)
 - [GDSII](../formats/gdsii.md)

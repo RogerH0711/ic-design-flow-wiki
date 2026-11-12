@@ -2,7 +2,7 @@
 title: Routing
 type: stage
 order: 8
-sources: [S1]
+sources: [S1, S2]
 updated: 2026-11-12
 ---
 
@@ -26,6 +26,8 @@ _Not yet covered by an ingested source._
 - The global router analyzes the routing resources and allocates them so that no region overflows in the horizontal or vertical direction. [S1 §Global Routing]
 - The detailed router works through pin access analysis, track assignment, an initial detailed routing, and search and repair, and has its own design rule checking engine. [S1 §Detail Routing]
 - An antenna check reports the nets with an [antenna violation](../concepts/antenna-violation.md). [S1 §Antenna Checker]
+- In the LibreLane reference flow the antenna check runs right after global routing and again as part of an antenna repair step, so that the effect of the repair can be seen. [S2 §Antenna Check]
+- That repair inserts an antenna diode, a standard cell, next to each cell input pin that is affected. [S2 §Antenna Check]
 
 ## Checks
 
@@ -42,5 +44,8 @@ _Not yet covered by an ingested source._
 
 - [Clock Tree Synthesis](clock-tree-synthesis.md)
 - [Layout Finishing](layout-finishing.md)
+- [Signoff](signoff.md)
+- [DRC](../concepts/drc.md)
+- [ASIC Design Flow](../concepts/asic-design-flow.md)
 - [Antenna Violation](../concepts/antenna-violation.md)
 - [OpenROAD](../tools/openroad.md)

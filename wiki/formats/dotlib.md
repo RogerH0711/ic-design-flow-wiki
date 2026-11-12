@@ -1,13 +1,13 @@
 ---
 title: Dotlib
 type: format
-sources: [S2, S4]
+sources: [S2, S4, S6]
 updated: 2026-11-12
 ---
 
 # Dotlib
 
-Also called: `.lib`
+Also called: `.lib`, Liberty
 
 ## What it is
 
@@ -17,6 +17,8 @@ Dotlib is a library format that gives an abstract model of each cell: what its i
 
 - It is typically used for synthesis and for static timing analysis. [S4 §dotlib]
 - The LibreLane flow writes `lib` views of the finished design among its final results. [S2 §Final Results]
+
+- The SKY130 file type table lists timing files, which describe pin-to-pin timing, with Liberty as the file format. [S6 §File Types]
 
 ## Related pages
 

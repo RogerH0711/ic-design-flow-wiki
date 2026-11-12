@@ -56,3 +56,13 @@ Appended by `scripts/lint_wiki.py --record`. Failed runs are kept on purpose.
 
 ## 2026-11-12 14:50 | ingest S5 (after review fixes) | PASS | lint_wiki: 50 pages, 0 errors
 
+
+## 2026-11-12 14:50 | ingest S6 (round 1) | PASS | lint_wiki: 51 pages, 0 errors
+
+
+## 2026-11-12 14:52 | ingest S6 (after review fixes) | FAIL | lint_wiki: 51 pages, 1 errors
+
+- `TERM   wiki/formats/lef.md:22: use 'GDSII' instead of 'GDS'`
+
+## 2026-11-12 14:53 | ingest S6 (after review fixes, round 2) | PASS | lint_wiki: 51 pages, 0 errors
+

@@ -1,7 +1,7 @@
 ---
 title: DRC
 type: concept
-sources: [S1, S2, S4]
+sources: [S1, S2, S4, S6]
 updated: 2026-11-12
 ---
 
@@ -23,6 +23,7 @@ The rules come with the process design kit as a rule file, and the checking tool
 
 - A design with no violations is called DRC-clean. [S4 §DRC]
 - A DRC deck is an implementation of a set of design rule checks for one particular tool. [S4 §DRC deck]
+- The SKY130 file type table lists a DRC deck, with the purpose of verifying that a design meets the design rules. [S6 §File Types]
 
 ## Source differences
 

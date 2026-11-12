@@ -177,3 +177,20 @@ level; S5 has a behavioral level above RTL.
 headings in `.rst` sources and reported 22 valid S5 citations as invalid.
 Fence handling now applies to `.md` files only. No rule changed. The owner
 is told in the hand-over.
+
+## [2026-11-12] ingest | S6 SkyWater SKY130 PDK: Libraries and File Types
+
+- Created (1): source page.
+- Updated (9): concepts `pdk`, `standard-cell-library`, `drc`, `lvs`;
+  formats `lef`, `dotlib`; tools `magic`, `netgen`; and `index.md`.
+- The File Types page is one table with a single heading, so every
+  citation to it is `[S6 §File Types]`: section-level precision is not
+  available for this source.
+- The name Liberty for the timing file format does appear here, so it is
+  now listed as an alias on `formats/dotlib.md`.
+- Gap still open: a general definition of a standard cell library.
+
+## [2026-11-12] conflict | S4 and S6 expand LEF differently
+
+Recorded in `formats/lef.md`. S4: Layout Exchange Format. S6: Library
+Exchange Format.

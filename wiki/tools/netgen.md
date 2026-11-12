@@ -1,7 +1,7 @@
 ---
 title: Netgen
 type: tool
-sources: [S2, S4]
+sources: [S2, S4, S6]
 updated: 2026-11-12
 ---
 
@@ -18,6 +18,8 @@ The reference flow uses it for that check. [S2 §LVS]
 - It receives the layout, already converted to a SPICE netlist, and the schematic, and compares them. [S2 §LVS]
 - Its log ends with a one-line verdict; a clean result says that the circuits match uniquely. [S2 §LVS]
 - When there are errors, a second, more detailed report sets layout and schematic side by side. [S2 §LVS]
+
+- In the SKY130 file type table, the LVS deck for open tooling includes a Netgen setup file. [S6 §File Types]
 
 ## Related pages
 

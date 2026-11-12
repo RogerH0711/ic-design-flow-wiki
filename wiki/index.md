@@ -69,3 +69,4 @@ In flow order. Stage 1 (specification) has no page yet.
 - [S3: LibreLane, Achieving Timing Closure](sources/s3-librelane-timing-closure.md) — setup and hold theory and practical closure tips.
 - [S4: LibreLane Glossary](sources/s4-librelane-glossary.md) — short definitions of terms, formats, and tools.
 - [S5: Yosys, A Primer on Digital Circuit Synthesis](sources/s5-yosys-synthesis-primer.md) — abstraction levels and what synthesis does.
+- [S6: SkyWater SKY130 PDK, Libraries and File Types](sources/s6-skywater-pdk-libraries-file-types.md) — what a PDK contains.

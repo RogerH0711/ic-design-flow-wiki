@@ -1,7 +1,7 @@
 ---
 title: PDK
 type: concept
-sources: [S4]
+sources: [S4, S6]
 updated: 2026-11-12
 ---
 
@@ -21,6 +21,10 @@ A process design kit (PDK) describes one fabrication process to the design tools
 - A design can only be made for a particular process node with the PDK of that node. [S4 §process node]
 - sky130 is an open-source PDK for a 180 nm to 130 nm hybrid technology of SkyWater, and the default PDK of LibreLane. [S4 §sky130]
 - Design rules are set by the foundry for a given manufacturing process. [S4 §DRC]
+
+- The SKY130 PDK is made up of libraries. Each library name states the process, the library's source, its type (for example digital standard cells or I/O and periphery), and optionally a name. [S6 §Library Naming]
+- Its table of file types includes a DRC deck, an LVS deck, abstract cell views, timing files, transistor-level netlists, and device models for use with SPICE. [S6 §File Types]
+- The same table has rows for seal ring rules, marked ready for open tooling, and for fill structure rules and scribe line rules, which are not. Open tools are mostly marked ready, while the closed-tool entries are mostly in progress. [S6 §File Types]
 
 ## Related pages
 

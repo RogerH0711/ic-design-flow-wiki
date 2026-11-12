@@ -1,7 +1,7 @@
 ---
 title: Standard Cell Library
 type: concept
-sources: [S3]
+sources: [S3, S6]
 updated: 2026-11-12
 ---
 
@@ -25,6 +25,11 @@ A cell's size indicates its driving strength: how much current it can supply to 
 - Sizing up is not free: a larger cell is a heavier load for the cell that drives it, which slows that one down. [S3 §Timing Optimizations]
 - The buffer is a cell with no logic function that matters a great deal for timing. It sharpens a slow signal, splits a long wire into shorter segments, and can add delay to a data path to fix a hold violation. [S3 §Timing Optimizations]
 - Cell delay is estimated with a simple resistance and capacitance model, in which the load includes the wires and the input pins of the cells being driven. [S3 §Modeling CMOS Cells]
+
+- Digital standard cells are one of the library types of the SKY130 PDK. [S6 §Library Naming]
+- SKY130 has such libraries both from the foundry and from third parties. [S6 §Digital Standard Cell Libraries]
+- The PDK welcomes new libraries from outside developers. [S6 §Creating New Libraries]
+- Build space libraries are a different type: they are meant for things like memory compilers, and have their own design rules that allow higher density. [S6 §Build Space Libraries]
 
 ## Related pages
 

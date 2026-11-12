@@ -125,3 +125,29 @@ hand; and extending S7 with the Simulating chapter of the same guide.
   repository; noted in `raw/sources.json`.
 - Gaps: none closed; `routing` Inputs still open. New: a general
   definition of a standard cell library (expected from S4, S6).
+
+## [2026-11-12] ingest | S4 LibreLane Glossary
+
+- Created (6): source page; concepts `pdk`, `rtl`, `tape-out`; formats
+  `lef`, `dotlib`.
+- Updated (19): concepts `netlist`, `drc`, `lvs`, `static-timing-analysis`,
+  `timing-closure`, `timing-corners`, `asic-design-flow`,
+  `standard-cell-library`; formats `gdsii`, `def`, `sdc`, `spef`, `sdf`;
+  tools `klayout`, `magic`, `netgen`, `yosys`, `openroad`, `librelane`;
+  and `index.md`.
+- Gaps closed: `gdsii`, `def`, `magic`, `yosys` What it is.
+- Citations to this source use the glossary term as the section name.
+
+## [2026-11-12] conflict | S3 and S4 define timing closure differently
+
+Recorded in `concepts/timing-closure.md`. S3: a process. S4: a state.
+
+## [2026-11-12] conflict | S2 and S4 give PnR different scopes
+
+Recorded in `concepts/asic-design-flow.md`. S2: the whole physical
+implementation step. S4: placement and routing only.
+
+## [2026-11-12] decision | Terminology after S4
+
+The `.lib` page is named Dotlib, the word S4 uses. A first draft named it
+Liberty, a name that appears in no ingested source; corrected before review.

@@ -1,7 +1,7 @@
 ---
 title: Magic
 type: tool
-sources: [S2]
+sources: [S2, S4]
 updated: 2026-11-12
 ---
 
@@ -9,9 +9,9 @@ updated: 2026-11-12
 
 ## What it is
 
-Magic is one of the two tools the reference flow uses for [DRC](../concepts/drc.md). [S2 §DRC]
+Magic is a free software viewer and editor for layouts in DEF or GDSII form. [S4 §Magic]
 
-_Not yet covered by an ingested source._
+It is one of the two tools the reference flow uses for [DRC](../concepts/drc.md). [S2 §DRC]
 
 ## Role in the flow
 

@@ -1,13 +1,15 @@
 ---
 title: OpenROAD
 type: tool
-sources: [S1, S2]
+sources: [S1, S2, S4]
 updated: 2026-11-12
 ---
 
 # OpenROAD
 
 ## What it is
+
+OpenROAD is an open-source tool chain for generating the layout of digital chips, concentrating on the RTL-to-GDSII phase. Inside LibreLane it does floorplanning, placement and routing, and design optimization. [S4 §OpenROAD]
 
 OpenROAD is the application that carries out the automated flow: Tcl scripts drive open-source tools from synthesis through to the final layout file. [S1 §Running The Automated RTL-to-GDS Flow]
 

@@ -1,7 +1,7 @@
 ---
 title: SDF
 type: format
-sources: [S2, S3]
+sources: [S2, S3, S4]
 updated: 2026-11-12
 ---
 
@@ -12,6 +12,8 @@ Also called: Standard Delay Format
 ## What it is
 
 SDF is a standardized (IEEE) way of writing down timing data so that it can be exchanged between steps of the design process. One file covers the timing of every cell in the design. [S3 §SDF Annotated GL Simulation using CVC]
+
+The glossary likewise calls it an IEEE standard for timing data. [S4 §SDF]
 
 ## Produced by and used by
 

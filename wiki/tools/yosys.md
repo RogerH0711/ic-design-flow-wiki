@@ -1,7 +1,7 @@
 ---
 title: Yosys
 type: tool
-sources: [S1, S2]
+sources: [S1, S2, S4]
 updated: 2026-11-12
 ---
 
@@ -9,9 +9,9 @@ updated: 2026-11-12
 
 ## What it is
 
-Yosys is the tool the flow tutorial lists for the synthesis step. [S1 §Running The Automated RTL-to-GDS Flow]
+Yosys is described as a framework on which RTL synthesis tools are built; it supports most of Verilog-2005. [S4 §Yosys]
 
-_Not yet covered by an ingested source._
+The flow tutorial lists it for the synthesis step. [S1 §Running The Automated RTL-to-GDS Flow]
 
 ## Role in the flow
 

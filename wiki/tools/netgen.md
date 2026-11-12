@@ -1,7 +1,7 @@
 ---
 title: Netgen
 type: tool
-sources: [S2]
+sources: [S2, S4]
 updated: 2026-11-12
 ---
 
@@ -9,7 +9,9 @@ updated: 2026-11-12
 
 ## What it is
 
-Netgen is the tool the reference flow uses for [LVS](../concepts/lvs.md). [S2 §LVS]
+Netgen is an open-source tool for running [LVS](../concepts/lvs.md). [S4 §Netgen]
+
+The reference flow uses it for that check. [S2 §LVS]
 
 ## Role in the flow
 

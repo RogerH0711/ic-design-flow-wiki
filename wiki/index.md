@@ -35,6 +35,9 @@ In flow order. Stage 1 (specification) has no page yet.
 - [Timing Corners](concepts/timing-corners.md) — the extreme conditions under which timing is analyzed.
 - [Timing Paths](concepts/timing-paths.md) — where a path starts and ends, and the four types.
 - [Timing Violations](concepts/timing-violations.md) — setup and hold problems and how the flow reports and repairs them.
+- [PDK](concepts/pdk.md) — the files that model a fabrication process for the design tools.
+- [RTL](concepts/rtl.md) — the register-transfer level and hardware description languages.
+- [Tape-out](concepts/tape-out.md) — sending the finished design to be manufactured.
 
 ## Tools
 
@@ -54,9 +57,12 @@ In flow order. Stage 1 (specification) has no page yet.
 - [SDC](formats/sdc.md) — timing constraints.
 - [SDF](formats/sdf.md) — cell timing data for gate-level simulation.
 - [SPEF](formats/spef.md) — extracted wire parasitics.
+- [LEF](formats/lef.md) — abstract view of cells and macros.
+- [Dotlib](formats/dotlib.md) — interface and timing model of cells.
 
 ## Sources
 
 - [S1: OpenROAD Flow Scripts Tutorial](sources/s1-orfs-flow-tutorial.md) — a full RTL-to-GDSII run, stage by stage.
 - [S2: LibreLane Newcomers' Tutorial](sources/s2-librelane-newcomers-tutorial.md) — the list of flow steps and the four signoff checks.
 - [S3: LibreLane, Achieving Timing Closure](sources/s3-librelane-timing-closure.md) — setup and hold theory and practical closure tips.
+- [S4: LibreLane Glossary](sources/s4-librelane-glossary.md) — short definitions of terms, formats, and tools.

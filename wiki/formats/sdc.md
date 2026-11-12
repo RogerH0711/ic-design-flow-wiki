@@ -1,7 +1,7 @@
 ---
 title: SDC
 type: format
-sources: [S1, S2, S3]
+sources: [S1, S2, S3, S4]
 updated: 2026-11-12
 ---
 
@@ -16,6 +16,8 @@ The constraints state the designer's intent so that the tools can optimize and a
 Basic constraints are the clock definition, the delays of input and output ports relative to the clock, the load on output ports, and the cells driving the input ports. The format also expresses timing exceptions: false paths and multi-cycle paths. [S3 §Timing Constraints]
 
 The least it must contain is a clock definition: a named clock, its period, and the port it enters through. [S1 §Timing Constraints]
+
+The glossary describes it more broadly, as a format for telling EDA tools the design's requirements, including timing, power, and area. [S4 §SDC]
 
 ## Produced by and used by
 

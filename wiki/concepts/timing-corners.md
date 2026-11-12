@@ -1,7 +1,7 @@
 ---
 title: Timing Corners
 type: concept
-sources: [S1, S2]
+sources: [S1, S2, S4]
 updated: 2026-11-12
 ---
 
@@ -11,10 +11,14 @@ Also called: IPVT corners
 
 ## Definition
 
-A timing corner is one combination of extreme conditions under which timing is analyzed. The four ingredients are interconnect, process, voltage, and temperature. [S2 §STA]
+Timing analysis is always carried out for some assumed physical conditions; one such set of conditions is a timing corner. [S4 §timing corner]
+
+In LibreLane a corner has four components: interconnect, process, voltage, and temperature, abbreviated IPVT. [S4 §IPVT]
 
 - Process, voltage, and temperature corners stand for the extremes of manufacturing variation, supply voltage, and operating temperature that a chip may meet. [S2 §STA]
 - Interconnect corners account for variation in the wires: their width, thickness, and height, and the material around them. [S2 §STA]
+
+- On-chip variation is the name for differences in the physical and electrical characteristics of chips, caused by manufacturing, materials, or environment. [S4 §On-chip variation]
 
 ## Why it matters
 

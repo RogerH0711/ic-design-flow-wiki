@@ -1,7 +1,7 @@
 ---
 title: LibreLane
 type: tool
-sources: [S2, S3]
+sources: [S2, S3, S4]
 updated: 2026-11-12
 ---
 
@@ -22,6 +22,8 @@ It includes a reference flow, named Classic, that uses only open-source tools an
 - Its Classic flow attempts timing closure automatically, after clock tree synthesis and after global routing, and assumes a single clock domain. [S3 §Tips for Achieving Timing Closure]
 - Flows can be extended or changed with Python scripts. [S2 §What is LibreLane?]
 
+- Its predecessor OpenLane was developed by Efabless Corporation in 2020 and aimed at easy installation and use, with the whole flow configured from one file. [S4 §OpenLane]
+
 ## Related pages
 
 - [OpenROAD](openroad.md)
@@ -32,3 +34,4 @@ It includes a reference flow, named Classic, that uses only open-source tools an
 - [Signoff](../stages/signoff.md)
 - [Timing Closure](../concepts/timing-closure.md)
 - [ASIC Design Flow](../concepts/asic-design-flow.md)
+- [PDK](../concepts/pdk.md)

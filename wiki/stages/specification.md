@@ -42,3 +42,4 @@ The process applies to new designs; a minor change to an existing design is hand
 - [RTL Design](rtl-design.md)
 - [Functional Verification](functional-verification.md)
 - [ASIC Design Flow](../concepts/asic-design-flow.md)
+- [Testplan](../concepts/testplan.md)

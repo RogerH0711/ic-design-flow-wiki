@@ -42,6 +42,8 @@ In flow order.
 - [Levels of Abstraction](concepts/levels-of-abstraction.md) — from system level down to transistors.
 - [Technology Mapping](concepts/technology-mapping.md) — converting a design into cells the target really has.
 - [Coverage](concepts/coverage.md) — measuring how much of a design the tests exercised.
+- [Regression](concepts/regression.md) — running all simulations regularly.
+- [Testplan](concepts/testplan.md) — the planned tests and coverage points for a design.
 
 ## Tools
 
@@ -75,3 +77,4 @@ In flow order.
 - [S6: SkyWater SKY130 PDK, Libraries and File Types](sources/s6-skywater-pdk-libraries-file-types.md) — what a PDK contains.
 - [S7: Verilator User's Guide, Overview and Simulating](sources/s7-verilator-overview-simulating.md) — what Verilator does and how coverage is collected.
 - [S8: OpenTitan, Designing Hardware](sources/s8-opentitan-designing-hardware.md) — from concept and specification to a first skeleton design.
+- [S10: Design Verification Methodology within OpenTitan](sources/s10-opentitan-dv-methodology.md) — how one project plans, runs, and closes verification.

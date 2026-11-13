@@ -221,3 +221,30 @@ Exchange Format.
 
 Recorded in `concepts/asic-design-flow.md`. S2: five technical steps. S8:
 three project stages (Specification, In Development, Signed off).
+
+## [2026-11-13] ingest | S10 Design Verification Methodology within OpenTitan
+
+- Ingested before S9 because its text had already been read when a usage
+  limit interrupted the session; S9 follows.
+- Created (3): source page; concepts `testplan`, `regression`.
+- Updated (6): stages `functional-verification`, `signoff`; concept
+  `coverage`; tool `verilator`; link in `specification`; and `index.md`.
+- Gap not closed: `coverage` Definition. S10 says why coverage is needed
+  and what kinds exist, but the reviewer is right that it never defines it.
+- S10 describes one project's methodology; statements are scoped to it.
+- Not used: X-propagation, security verification, automation and code
+  reuse sections (project-specific detail).
+
+## [2026-11-13] conflict | Three sources use "signoff" for three things
+
+Recorded in `stages/signoff.md`. S2: physical and timing checks. S10: the
+review closing verification. S8: a project stage.
+
+## [2026-11-13] conflict | S7 and S10 on coverage
+
+Recorded in `concepts/coverage.md`: grouping of metrics, and whether full
+toggle coverage is worth collecting.
+
+## [2026-11-13] conflict | Open-source versus commercial verification tools
+
+Recorded in `stages/functional-verification.md` (S10 against S2).

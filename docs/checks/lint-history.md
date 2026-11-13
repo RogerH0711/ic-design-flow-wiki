@@ -79,3 +79,17 @@ Appended by `scripts/lint_wiki.py --record`. Failed runs are kept on purpose.
 
 ## 2026-11-13 10:07 | ingest S8 (after review fixes) | PASS | lint_wiki: 56 pages, 0 errors
 
+
+## 2026-11-13 10:08 | ingest S10 (round 1) | FAIL | lint_wiki: 59 pages, 1 errors
+
+- `TERM   wiki/concepts/coverage.md:34: use 'signoff' instead of 'sign off'`
+
+## 2026-11-13 10:08 | ingest S10 (round 2) | PASS | lint_wiki: 59 pages, 0 errors
+
+
+## 2026-11-13 10:10 | ingest S10 (after review fixes) | FAIL | lint_wiki: 59 pages, 1 errors
+
+- `TERM   wiki/stages/signoff.md:51: use 'signoff' instead of 'sign-off'`
+
+## 2026-11-13 10:11 | ingest S10 (after review fixes, round 2) | PASS | lint_wiki: 59 pages, 0 errors
+

@@ -2,7 +2,7 @@
 title: Signoff
 type: stage
 order: 10
-sources: [S2]
+sources: [S2, S8, S10]
 updated: 2026-11-12
 ---
 
@@ -45,6 +45,10 @@ The reference flow runs four checks. [S2 §Signoff Steps]
 - LVS shorts: wires that should be separate are connected, most seriously power to ground. [S2 §LVS]
 - LVS opens: wires or components that should be connected are left dangling. [S2 §LVS]
 - LVS missing components: a component expected from the schematic is absent from the layout. [S2 §LVS]
+
+## Source differences
+
+- What signoff refers to: S2 uses the word for the last phase of implementation, the physical and timing checks on the layout [S2 §Signoff Steps]; S10 uses it for verification, as in the final review held once the verification effort is complete [S10 §Sign-off Reviews]; and S8 has a project stage called Signed off. [S8 §Stages of a Design]
 
 ## Related pages
 

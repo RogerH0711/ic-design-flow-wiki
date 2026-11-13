@@ -1,7 +1,7 @@
 ---
 title: Verilator
 type: tool
-sources: [S2, S3, S7]
+sources: [S2, S3, S7, S10]
 updated: 2026-11-12
 ---
 
@@ -19,6 +19,8 @@ Verilator converts a design written in Verilog or SystemVerilog into a C++ or Sy
 - The executable can write waveform traces for viewing and [coverage](../concepts/coverage.md) data for later analysis. [S7 §Overview]
 - When a simulation ends, a model built with the right option prints a summary with the simulated time reached, the wall-clock time, and the simulation speed. [S7 §Simulation Summary Report]
 - It does not support SDF, so it cannot run gate-level simulation with timing. [S3 §SDF Annotated GL Simulation using CVC]
+
+- The OpenTitan project promotes it as an open-source verification tool, while a different simulator remains its tool for signoff. [S10 §Language and Tool Selection]
 
 ## Related pages
 

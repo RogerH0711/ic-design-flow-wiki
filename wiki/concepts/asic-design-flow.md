@@ -1,7 +1,7 @@
 ---
 title: ASIC Design Flow
 type: concept
-sources: [S1, S2, S4, S5]
+sources: [S1, S2, S4, S5, S8]
 updated: 2026-11-12
 ---
 
@@ -45,6 +45,8 @@ Also called: PnR, Placement and Routing, Place and Route (all for step 4)
 
 - The scope of `PnR`: S2 uses the abbreviation as another name for the whole physical implementation step, floorplanning and clock tree synthesis included [S2 §Newcomers' Tutorial], while S4 defines it as a phase made of two things, placement and routing [S4 §PnR], and names floorplanning next to it in a list of what OpenROAD is used for. [S4 §OpenROAD]
 
+- Stages of a design: S2 lists five technical steps from design entry to signoff [S2 §Newcomers' Tutorial], while S8, pointing to its project's governance document, speaks of three broad stages in a design's life, named Specification, In Development, and Signed off. [S8 §Stages of a Design]
+
 ## Related pages
 
 - [RTL Design](../stages/rtl-design.md)
@@ -62,3 +64,4 @@ Also called: PnR, Placement and Routing, Place and Route (all for step 4)
 - [PDK](pdk.md)
 - [Tape-out](tape-out.md)
 - [Levels of Abstraction](levels-of-abstraction.md)
+- [Specification](../stages/specification.md)

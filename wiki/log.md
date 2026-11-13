@@ -206,3 +206,18 @@ Exchange Format.
 - Not used: benchmarking, profiling, and save/restore sections.
 - Conflicts: none.
 
+## [2026-11-12] ingest | S8 OpenTitan: Designing Hardware
+
+- Created (2): source page; stage `specification` (order 1).
+- Updated (4): stage `rtl-design`; concept `asic-design-flow`; link in
+  `functional-verification`; and `index.md`.
+- Gap closed: stage 1 now has a page. Every stage from 1 to 10 exists.
+- S8 describes one project's process; statements are scoped to OpenTitan.
+- Not used: the sections on changing interrupts.
+- S7 follow-up: the reviewer's five missed points for S7 were judged tool
+  detail below overview depth and left out.
+
+## [2026-11-12] conflict | S2 and S8 divide a design's life differently
+
+Recorded in `concepts/asic-design-flow.md`. S2: five technical steps. S8:
+three project stages (Specification, In Development, Signed off).

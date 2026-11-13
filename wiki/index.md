@@ -5,8 +5,9 @@ order, then follow links into concepts, tools, and formats.
 
 ## Stages
 
-In flow order. Stage 1 (specification) has no page yet.
+In flow order.
 
+1. [Specification](stages/specification.md) — agreeing and writing down what the design must do.
 2. [RTL Design](stages/rtl-design.md) — the design is written in a hardware description language.
 3. [Functional Verification](stages/functional-verification.md) — simulation and formal verification against the requirements.
 4. [Logic Synthesis](stages/logic-synthesis.md) — turns the Verilog design and its constraints into the first netlist of the flow.
@@ -73,3 +74,4 @@ In flow order. Stage 1 (specification) has no page yet.
 - [S5: Yosys, A Primer on Digital Circuit Synthesis](sources/s5-yosys-synthesis-primer.md) — abstraction levels and what synthesis does.
 - [S6: SkyWater SKY130 PDK, Libraries and File Types](sources/s6-skywater-pdk-libraries-file-types.md) — what a PDK contains.
 - [S7: Verilator User's Guide, Overview and Simulating](sources/s7-verilator-overview-simulating.md) — what Verilator does and how coverage is collected.
+- [S8: OpenTitan, Designing Hardware](sources/s8-opentitan-designing-hardware.md) — from concept and specification to a first skeleton design.

@@ -73,3 +73,9 @@ Appended by `scripts/lint_wiki.py --record`. Failed runs are kept on purpose.
 
 ## 2026-11-12 14:55 | ingest S7 (after review fixes) | PASS | lint_wiki: 54 pages, 0 errors
 
+
+## 2026-11-12 14:55 | ingest S8 (round 1) | PASS | lint_wiki: 56 pages, 0 errors
+
+
+## 2026-11-13 10:07 | ingest S8 (after review fixes) | PASS | lint_wiki: 56 pages, 0 errors
+

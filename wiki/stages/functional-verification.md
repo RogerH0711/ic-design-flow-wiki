@@ -44,3 +44,4 @@ Functional verification makes sure that the design behaves as its requirements s
 - [SDF](../formats/sdf.md)
 - [Coverage](../concepts/coverage.md)
 - [Verilator](../tools/verilator.md)
+- [Specification](specification.md)

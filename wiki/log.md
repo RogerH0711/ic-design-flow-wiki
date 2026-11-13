@@ -248,3 +248,21 @@ toggle coverage is worth collecting.
 ## [2026-11-13] conflict | Open-source versus commercial verification tools
 
 Recorded in `stages/functional-verification.md` (S10 against S2).
+
+## [2026-11-13] ingest | S9 lowRISC Verilog Coding Style Guide
+
+- Created (1): source page.
+- Updated (4): stage `rtl-design` (coding rules, checks, common problems);
+  concept `rtl`; stage `functional-verification`; and `index.md`.
+- Read in part: the design-relevant sections were read in full (which
+  Verilog to use, clocks, resets, assignments, delays, latches, registers,
+  don't-cares, combinational logic, state machines, declarations,
+  assertions). Formatting and naming sections were skimmed by heading
+  only. This departs from AGENTS.md section 8 step 1 ("read the whole raw
+  file") and is reported to the owner.
+- The heading "Summary" occurs four times in S9, so a citation to it is
+  ambiguous for the lint; the wiki cites only the first.
+- Conflicts: none.
+- Gaps still open: `routing` Inputs; general definitions of coverage and
+  of a standard cell library.
+

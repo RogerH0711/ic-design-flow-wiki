@@ -2,7 +2,7 @@
 title: RTL Design
 type: stage
 order: 2
-sources: [S2, S5, S7, S8]
+sources: [S2, S5, S7, S8, S9]
 updated: 2026-11-12
 ---
 
@@ -33,12 +33,27 @@ The design is written down in a hardware description language such as Verilog. F
 - The skeleton is then filled in step by step, in changes small enough for reviewers to digest. [S8 §Full Design]
 - When a block is ready it can be included in the top-level design of the whole chip, after agreement on how to integrate it and a check that the top-level simulation is not harmed. [S8 §Top Level Inclusion]
 
+- The lowRISC style guide aims at consistency, best practices, and code reuse; the next items are rules from it. [S9 §Summary]
+- Clocked logic uses non-blocking assignments and purely combinational logic uses blocking assignments. [S9 §Blocking and Non-blocking Assignments]
+- Flip-flops are used in place of latches unless a latch is absolutely necessary. [S9 §Sequential Logic (Latches)]
+- Synthesizable modules are designed for zero-delay simulation and contain no delay statements. [S9 §Delay Modeling]
+- A state machine has three parts: an enumeration of its states, a combinational block that computes the next state, and a clocked block that updates the state. [S9 §Finite State Machines]
+- Clock signal names begin with `clk`, and resets are active-low and asynchronous. [S9 §Clocks] [S9 §Resets]
+
 ## Checks
 
 - [Verilator](../tools/verilator.md) lints the SystemVerilog code it is given as part of its normal use. [S7 §Overview]
 - The reference flow lints the RTL before doing anything else: its first step directories are a lint run followed by checkers for lint errors and warnings. [S2 §Run directory]
 
 - Even the first check-ins should compile, be free of syntax errors, and follow the coding style guide. [S8 §Initial Skeleton Design]
+
+- No signal may be left for the tools to infer: each one is declared, with a data type, before it is used. [S9 §Declare all signals]
+- Designers are encouraged to place SystemVerilog assertions all through the design, both as correctness checks and to catch invalid conditions. [S9 §Assertion Macros]
+
+## Common problems
+
+- Simulation and synthesis disagreeing. Assigning `X` to mark don't-care conditions can cause such mismatches, and so can a latch inferred inside a function. [S9 §Don't Cares (`X`'s)] [S9 §Combinational Logic]
+- A register described with both kinds of assignment will not simulate correctly. [S9 §Sequential Logic (Registers)]
 
 ## Related pages
 

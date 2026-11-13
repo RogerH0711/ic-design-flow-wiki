@@ -2,7 +2,7 @@
 title: Functional Verification
 type: stage
 order: 3
-sources: [S2, S3, S5, S7, S10]
+sources: [S2, S3, S5, S7, S9, S10]
 updated: 2026-11-12
 ---
 
@@ -55,7 +55,9 @@ The design being verified is called the design under test, or DUT. [S10 §Design
 - Among the conditions are a consistent 100 percent pass rate in nightly regressions [S10 §Nightly] and coverage that has been collected, analyzed, and reported, with waivers. [S10 §Coverage Collection]
 - A final review confirms that every checklist item is complete without major exceptions or open issues. [S10 §Sign-off Reviews]
 
+- Using SVAs in the design to flag invalid conditions, in place of propagating `X` values, makes simulation fail quickly, and in several cases formal property verification can prove whether the SVAs can always be fulfilled. [S9 §Don't Cares (`X`'s)]
 - Standard RTL simulation can miss problems with unknown values that gate-level simulation would detect; OpenTitan enables X-propagation in RTL simulation to catch them. [S10 §X-Propagation (Xprop)]
+
 
 ## Source differences
 

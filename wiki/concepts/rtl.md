@@ -1,7 +1,7 @@
 ---
 title: RTL
 type: concept
-sources: [S4, S5]
+sources: [S4, S5, S9]
 updated: 2026-11-12
 ---
 
@@ -25,6 +25,9 @@ At this level a design consists of combinational data paths and registers. It is
 
 - Keeping the design in an HDL at this level makes simulation simple, because no extra tool is needed. [S5 §Register-Transfer Level (RTL)]
 - Many optimizations and analyses work best here, for example FSM detection and optimization. [S5 §Register-Transfer Level (RTL)]
+
+- The same language allows widely differing styles, which leads to code conflicts and slow reviews; the lowRISC style guide answers this with rules for synthesizable code and test bench code alike. [S9 §Summary]
+- That guide prefers flip-flops and discourages latches. [S9 §Sequential Logic (Latches)]
 
 ## Source differences
 

@@ -28,3 +28,4 @@ Verilator converts a design written in Verilog or SystemVerilog into a C++ or Sy
 - [RTL Design](../stages/rtl-design.md)
 - [Coverage](../concepts/coverage.md)
 - [LibreLane](librelane.md)
+- [cocotb](cocotb.md)

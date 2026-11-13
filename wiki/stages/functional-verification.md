@@ -2,7 +2,7 @@
 title: Functional Verification
 type: stage
 order: 3
-sources: [S2, S3, S5, S7, S9, S10]
+sources: [S2, S3, S5, S7, S9, S10, S11]
 updated: 2026-11-12
 ---
 
@@ -45,6 +45,7 @@ The design being verified is called the design under test, or DUT. [S10 §Design
 - Stress tests exercise several interfaces or features at once and are well suited to finding bugs and closing coverage. [S10 §Stress Tests]
 - The work is spread over three tiers: IP level, core level, and chip level. [S10 §DV Efforts in OpenTitan]
 - Chip-level verification aims to ensure that all the IPs are integrated correctly into the chip. [S10 §Chip Level DV]
+- A testbench can also be written in Python with [cocotb](../tools/cocotb.md): a test can read signal values from the DUT [S11 §Reading values from signals], and a failed assert statement fails the test. [S11 §Passing and failing tests]
 - All simulations are run regularly as a [regression](../concepts/regression.md). [S10 §Nightly]
 
 ## Checks
@@ -58,6 +59,8 @@ The design being verified is called the design under test, or DUT. [S10 §Design
 - Using SVAs in the design to flag invalid conditions, in place of propagating `X` values, makes simulation fail quickly, and in several cases formal property verification can prove whether the SVAs can always be fulfilled. [S9 §Don't Cares (`X`'s)]
 - Standard RTL simulation can miss problems with unknown values that gate-level simulation would detect; OpenTitan enables X-propagation in RTL simulation to catch them. [S10 §X-Propagation (Xprop)]
 
+- With cocotb, every test ends as passed or failed: in general it passes when its main coroutine completes without raising an exception, and fails on a failed assert statement or on almost any exception. [S11 §Passing and failing tests]
+- Log messages alone never fail a test. [S11 §Logging]
 
 ## Source differences
 
@@ -75,3 +78,4 @@ The design being verified is called the design under test, or DUT. [S10 §Design
 - [Specification](specification.md)
 - [Testplan](../concepts/testplan.md)
 - [Regression](../concepts/regression.md)
+- [cocotb](../tools/cocotb.md)

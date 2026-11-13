@@ -55,6 +55,7 @@ In flow order.
 - [OpenROAD Flow Scripts](tools/openroad-flow-scripts.md) — scripts that run the whole flow with one command.
 - [Yosys](tools/yosys.md) — the synthesis tool.
 - [Verilator](tools/verilator.md) — compiles a design into an executable simulation model; also lints.
+- [cocotb](tools/cocotb.md) — testbenches written in Python.
 
 ## Formats
 
@@ -79,3 +80,4 @@ In flow order.
 - [S8: OpenTitan, Designing Hardware](sources/s8-opentitan-designing-hardware.md) — from concept and specification to a first skeleton design.
 - [S10: Design Verification Methodology within OpenTitan](sources/s10-opentitan-dv-methodology.md) — how one project plans, runs, and closes verification.
 - [S9: lowRISC Verilog Coding Style Guide](sources/s9-lowrisc-verilog-style-guide.md) — coding rules for synthesizable RTL.
+- [S11: cocotb, Writing Testbenches](sources/s11-cocotb-writing-testbenches.md) — how tests are written and judged in cocotb.

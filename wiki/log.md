@@ -266,3 +266,12 @@ Recorded in `stages/functional-verification.md` (S10 against S2).
 - Gaps still open: `routing` Inputs; general definitions of coverage and
   of a standard cell library.
 
+## [2026-11-13] ingest | S11 cocotb: Writing Testbenches
+
+- Created (2): source page; tool `cocotb`.
+- Updated (3): stage `functional-verification`; link in `verilator`; and
+  `index.md`.
+- New gap: `cocotb` What it is. The chapter assumes the reader knows what
+  cocotb is.
+- Conflicts: none.
+- All eleven sources are now ingested.

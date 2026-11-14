@@ -64,43 +64,6 @@
     },
     {
       "n": 4,
-      "title": "The flow at a glance: five steps",
-      "lead": "",
-      "bullets": [
-        {
-          "text": "Design entry: describe the design in a hardware description language.",
-          "cards": [
-            "F1"
-          ]
-        },
-        {
-          "text": "Functional verification: confirm it behaves as required.",
-          "cards": [
-            "F2"
-          ]
-        },
-        {
-          "text": "Synthesis: convert the description into a netlist.",
-          "cards": [
-            "F3"
-          ]
-        },
-        {
-          "text": "Physical implementation: turn the netlist into a layout by floorplanning, placement, clock tree synthesis, and routing.",
-          "cards": [
-            "F4"
-          ]
-        },
-        {
-          "text": "Signoff: final checks before manufacturing.",
-          "cards": [
-            "F5"
-          ]
-        }
-      ]
-    },
-    {
-      "n": 5,
       "title": "Six words you need first",
       "lead": "",
       "bullets": [
@@ -133,6 +96,43 @@
           "text": "PDK (process design kit): files that describe one fabrication process to the tools.",
           "cards": [
             "V6"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "title": "The flow at a glance: five steps",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "Design entry: describe the design in a hardware description language.",
+          "cards": [
+            "F1"
+          ]
+        },
+        {
+          "text": "Functional verification: confirm it behaves as required.",
+          "cards": [
+            "F2"
+          ]
+        },
+        {
+          "text": "Synthesis: convert the description into a netlist.",
+          "cards": [
+            "F3"
+          ]
+        },
+        {
+          "text": "Physical implementation: turn the netlist into a layout by floorplanning, placement, clock tree synthesis, and routing.",
+          "cards": [
+            "F4"
+          ]
+        },
+        {
+          "text": "Signoff: final checks before manufacturing.",
+          "cards": [
+            "F5"
           ]
         }
       ]

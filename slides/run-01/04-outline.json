@@ -32,19 +32,6 @@
     {
       "n": 4,
       "kind": "content",
-      "title": "The flow at a glance: five steps",
-      "purpose": "Give the map before the details.",
-      "cards": [
-        "F1",
-        "F2",
-        "F3",
-        "F4",
-        "F5"
-      ]
-    },
-    {
-      "n": 5,
-      "kind": "content",
       "title": "Six words you need first",
       "purpose": "Define RTL, HDL, netlist, cell, library, PDK before they are used.",
       "cards": [
@@ -54,6 +41,19 @@
         "V4",
         "V5",
         "V6"
+      ]
+    },
+    {
+      "n": 5,
+      "kind": "content",
+      "title": "The flow at a glance: five steps",
+      "purpose": "Give the map before the details.",
+      "cards": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
       ]
     },
     {
@@ -251,7 +251,7 @@
       "n": 19,
       "kind": "recap",
       "title": "The whole flow on one page, and what our sources do not cover",
-      "purpose": "Recap the ten stages with input and output, and name the four open gaps.",
+      "purpose": "Recap the flow in the five steps of the overview, and name the open gaps that have evidence (three).",
       "cards": [
         "F1",
         "F2",
@@ -272,5 +272,5 @@
       "cards": []
     }
   ],
-  "changes_after_approval": "Review round 1 (06-review.md): evidence cards added to slides 11, 13, 15, 17 and 19. Titles, purposes, order and slide count are unchanged from the outline the owner approved."
+  "changes_after_approval": "Review round 1 (06-review.md): evidence cards added to slides 11, 13, 15, 17 and 19. Titles, purposes, order and slide count are unchanged from the outline the owner approved. At node 8 (2026-11-14) the owner approved swapping slides 4 and 5 so that the vocabulary comes before the overview, and accepted that slide 19 recaps five steps and three gaps; its purpose text was updated to match."
 }

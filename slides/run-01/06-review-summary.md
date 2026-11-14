@@ -1,6 +1,6 @@
 # Node 6 summary: faithfulness review of the draft
 
-Three rounds, each by a fresh sub-agent that saw only the draft, the evidence
+Four rounds, each by a fresh sub-agent that saw only the draft, the evidence
 cards and the outline.
 
 | Round | Scope | Checked | Findings | Sent back to |
@@ -8,6 +8,7 @@ cards and the outline.
 | 1 (`06-review.md`) | all 20 slides | 96 | 9 | node 5 for eight; node 3 for one (no card recorded the gaps) |
 | 2 (`06-review-round2.md`) | the 13 changed slides | 68 | 4 | node 5 |
 | 3 (`06-review-round3.md`) | the 5 changed slides | 25 | 1 | node 5 |
+| 4 (`06-review-round4.md`) | slides 4, 5, 15 after the owner's decisions | 15 | 0 | none |
 
 ## What happened after each round
 
@@ -23,8 +24,9 @@ cards and the outline.
   quiz question reworded so that it does not presuppose the converse of its
   card. Abbreviations HDL, RTL and PDK spelled out on slide 5.
 - Round 3. One label ("Common problem" became "Problem"). The fix is the
-  reviewer's own suggested wording, so no fourth round was run. This is the
-  one open point the owner may want to overrule.
+  reviewer's own suggested wording, so no fourth round was run at the time.
+- Round 4. Run at the owner's request after slides 4 and 5 were swapped: no
+  finding. The review loop is closed.
 
 ## Left for the owner at node 8
 

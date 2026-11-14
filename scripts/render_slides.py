@@ -67,7 +67,7 @@ def main():
             )
             strip = f'<ol class="strip" aria-label="The ten stages">{chips}</ol>'
         lead = f'<p class="lead">{esc(s["lead"])}</p>' if s.get("lead") else ""
-        tag = "ol" if kind in ("quiz",) or n == 4 else "ul"
+        tag = "ol" if kind == "quiz" or s["title"].startswith("The flow at a glance") else "ul"
         items = "".join(f"<li>{bullet_html(b['text'])}</li>" for b in s["bullets"])
         body = f"<{tag} class=\"points\">{items}</{tag}>" if items else ""
         sources = evidence = ""

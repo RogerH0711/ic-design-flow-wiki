@@ -1,0 +1,106 @@
+<!-- 繳交標題：成大 F74146115 資訊118 謝承祐 數位 IC 設計流程 LLM Wiki -->
+<h2>第十週作業：用 LLM Wiki 做一份教學 HTML 簡報</h2>
+<p>成大 F74146115 資訊118 謝承祐｜主題：數位 IC 設計流程（從 RTL 到 GDSII）</p>
+
+<h3>1. LLM Wiki 主題與簡短介紹</h3>
+<p>主題是「數位 IC 設計流程」的全流程概覽：specification → RTL design → functional verification → logic synthesis → floorplanning → placement → clock tree synthesis → routing → layout finishing → signoff。每一關講輸入、輸出和檢查什麼，不深入演算法。讀者設定為懂邏輯閘和 flip-flop、但沒看過 IC 設計流程的資訊系大二同學。Wiki 與簡報全英文。</p>
+<ul>
+  <li><b>先討論、後生成</b>：先由 AI 一次問一題，共十題，整理成需求摘要，我確認後才產生 AGENTS.md 與資料夾。紀錄：<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/docs/interview.md">docs/interview.md</a>、<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/docs/requirements.md">docs/requirements.md</a>（含每項需求對應 AGENTS.md 哪一節）。</li>
+  <li><b>Ingest 11 篇資料</b>（作業要求至少 5 篇），都是開源專案的官方文件，鎖定上游 commit 原文下載並附授權與 checksum：OpenROAD Flow Scripts 教學、LibreLane 的入門教學／Timing Closure／Glossary、Yosys 合成入門、SkyWater SKY130 PDK、Verilator 手冊、OpenTitan 的硬體設計與驗證方法論、lowRISC Verilog 風格指南、cocotb。清單：<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/raw/sources.json">raw/sources.json</a>。</li>
+  <li><b>規模</b>：62 頁（流程階段 10、概念 24、工具 9、檔案格式 8、來源摘要 11）。每個論點都標 <code>[來源代號 §章節]</code>；來源說法不同時兩邊並列（9 頁有 Source differences）；來源沒寫到的地方留固定的缺口標記，不用外部知識補。</li>
+</ul>
+
+<h3>2. LLM Wiki 連結</h3>
+<ul>
+  <li>Repo：<a href="https://github.com/RogerH0711/ic-design-flow-wiki">https://github.com/RogerH0711/ic-design-flow-wiki</a></li>
+  <li>Wiki 入口：<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/wiki/index.md">wiki/index.md</a>；建議從 <a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/wiki/concepts/asic-design-flow.md">ASIC Design Flow</a> 開始看</li>
+  <li>給 AI 的規則：<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/AGENTS.md">AGENTS.md</a>；Wiki 的操作紀錄：<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/wiki/log.md">wiki/log.md</a></li>
+</ul>
+
+<h3>3. 教學 HTML 簡報連結</h3>
+<ul>
+  <li>簡報（20 頁）：<a href="https://rogerh0711.github.io/ic-design-flow-wiki/slides/">https://rogerh0711.github.io/ic-design-flow-wiki/slides/</a></li>
+  <li>方向鍵換頁；按 <b>E</b> 會顯示該頁每個論點背後的 Wiki 原句。每頁底部列出用到的 Wiki 頁與原始出處，這是 Wiki 與簡報的對應方式。</li>
+  <li>教學結構：學習目標 → 兩個核心名詞 → 六個先備詞彙 → 流程地圖 → 十個階段各一頁（頁首有進度條）→ 來源說法不同之處 → 總複習與缺口 → 自我測驗。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/RogerH0711/ic-design-flow-wiki/main/slides/run-01/screenshots/slide-01.png" alt="簡報標題頁" width="640"></p>
+<p><img src="https://raw.githubusercontent.com/RogerH0711/ic-design-flow-wiki/main/slides/run-01/screenshots/slide-15.png" alt="簡報第 15 頁：Routing" width="640"></p>
+
+<h3>4. loop / graph 的設計</h3>
+<p>共有兩個流程，都寫成檔案交給 AI 照著做：ingest 的 loop（<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/AGENTS.md">AGENTS.md §8</a>）和簡報的 graph（<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/workflows/slides.md">workflows/slides.md</a>）。</p>
+
+<p><b>(a) Ingest loop：每篇來源重複一次</b></p>
+<pre>
+讀完整份 raw → 寫來源摘要頁 → 新增／更新相關頁面 → 更新 index 與 log
+   → [lint 腳本] ──不過──→ 只修報告列出的項目，重跑（最多 3 輪）
+   → [獨立審查 sub-agent：只給 raw 檔與被改的頁面] ──有問題──→ 修正 → 重跑 lint
+   → commit（一篇一個）
+</pre>
+
+<p><b>(b) 簡報 graph：八個節點，每個節點的產出都是檔案</b></p>
+<pre>
+[1 檢索] → [2 覆蓋率] → [3 證據卡] → [4 大綱] → [5 逐頁稿] → [6 忠實度審查] → [7 渲染] → [8 驗收]
+              │不足         ↑             │人工         ↑  ↑          │                ↑           │人工
+              └→ 停下來問我  │             └→ 重寫       │  └─ 措辭 ──┘                └─ 版面 ────┘
+                            └────── 沒有證據支持 ────────┼────────────┘
+                                                         └────── 內容要改 ──────────────────────────┘
+</pre>
+<table border="1" cellpadding="4">
+  <tr><th>節點</th><th>產出</th><th>誰檢查</th><th>不過退回</th></tr>
+  <tr><td>1 檢索</td><td>選用的 Wiki 頁清單</td><td>腳本：頁面存在、十個階段頁都在</td><td>1</td></tr>
+  <tr><td>2 覆蓋率</td><td>每個階段有幾句有出處的內容、哪裡有缺口</td><td>腳本</td><td>停下來問我</td></tr>
+  <tr><td>3 證據卡</td><td>每個論點一張卡：Wiki 原句＋頁面＋出處</td><td>腳本：原句必須逐字出現在該頁</td><td>3</td></tr>
+  <tr><td>4 大綱</td><td>16–20 頁的標題、用途、用哪些卡</td><td>腳本＋<b>我確認</b></td><td>4</td></tr>
+  <tr><td>5 逐頁稿</td><td>只能用證據卡寫</td><td>腳本：每句有卡、每頁最多 5 點 60 字、術語</td><td>5（只重寫該頁）</td></tr>
+  <tr><td>6 忠實度審查</td><td>審查報告</td><td>另開的 sub-agent，只看稿子與證據卡</td><td>措辭退 5；沒證據退 3</td></tr>
+  <tr><td>7 渲染</td><td>單一 HTML</td><td>腳本：頁數、每頁有出處列、1280×720 不溢出、截圖</td><td>7</td></tr>
+  <tr><td>8 驗收</td><td>驗收紀錄</td><td><b>我確認</b></td><td>內容退 5、版面退 7</td></tr>
+</table>
+<ul>
+  <li><b>哪些步驟會重複</b>：ingest 整個 loop 每篇來源跑一次；簡報的第 3 關逐張卡、第 5 關逐頁重做（只重做沒過的那一張或那一頁）；5 → 6 → 5 重複到審查沒有問題為止；審查說「沒有證據」時重新進入 3 → 4 → 5。</li>
+  <li><b>哪些地方要檢查或重新生成</b>：每一關都有檢查。能用程式判斷的（出處是否存在、原句是否逐字相符、字數、頁數、溢出）交給腳本；程式判斷不了的「這句話是不是真的忠於來源」交給沒看過製作過程的 sub-agent；方向性的決定（大綱、成品）由我確認。同一關最多 3 輪，超過就停下來問我。</li>
+  <li><b>為什麼這樣設計</b>：(1) 每關的產出都是檔案，所以錯在哪關就退回哪關，不用整份重來。(2) 不讓 AI 檢查自己的作品：寫的人和審的人分開，審查者只拿到成品與來源。(3) 把忠實度檢查往前放：簡報在第 3 關、還沒寫任何一頁之前，就先用腳本確認每個論點都有逐字對得上的 Wiki 原句，後面的審查只需要比對一句話和兩三句原文。</li>
+</ul>
+
+<h3>5. 一次實際執行的結果與檢查紀錄</h3>
+<p><b>(a) Ingest（11 篇）</b></p>
+<table border="1" cellpadding="4">
+  <tr><th>檢查</th><th>結果</th><th>紀錄</th></tr>
+  <tr><td>Lint 腳本</td><td>共 26 次，5 次失敗</td><td><a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/docs/checks/lint-history.md">lint-history.md</a></td></tr>
+  <tr><td>獨立審查</td><td>11 篇共 148 個問題，全部修正</td><td><a href="https://github.com/RogerH0711/ic-design-flow-wiki/tree/main/docs/checks/reviews">docs/checks/reviews/</a></td></tr>
+</table>
+<ul>
+  <li>前兩篇（S1、S2）ingest 時 lint 都是第一輪通過，但 AI 回頭對照原文後手動改了 12 句，全是 lint 抓不到的類型（<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/docs/checks/ingest-review-notes.md">ingest-review-notes.md</a>）。因此從第三篇起加入獨立審查，之後每篇都被抓出 6–20 個問題；S1、S2 事後補審，又找出 28 與 22 個。</li>
+  <li>審查抓到的錯誤類型：把自己的解釋寫成來源說的（例如自己替 coverage 下定義）、把單一專案或工具的做法寫成通則、丟掉原文的條件或保留語氣、標錯章節、改寫得太接近原文。</li>
+  <li>Lint 腳本自己也出過錯：有一次報 23 個錯誤，其中 22 個是誤報，原因是它把 <code>.rst</code> 檔的標題底線當成 code fence。修正後記在 log。</li>
+</ul>
+
+<p><b>(b) 簡報 run-01</b>（所有檔案：<a href="https://github.com/RogerH0711/ic-design-flow-wiki/tree/main/slides/run-01">slides/run-01/</a>；每次檢查自動寫入 <a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/slides/run-01/run-log.md">run-log.md</a>）</p>
+<table border="1" cellpadding="4">
+  <tr><th>節點</th><th>結果</th></tr>
+  <tr><td>1 檢索</td><td>先選 23 頁；審查後回來補 3 頁，共 26 頁</td></tr>
+  <tr><td>2 覆蓋率</td><td>十個階段都達標；最薄的是 placement；4 頁有缺口標記</td></tr>
+  <tr><td>3 證據卡</td><td>先 95 張；審查後回來補 9 張（含 3 張「缺口卡」），共 104 張</td></tr>
+  <tr><td>4 大綱</td><td>20 頁，我確認通過；驗收時我要求對調第 4、5 頁</td></tr>
+  <tr><td>5 逐頁稿</td><td>檢查共 10 次，5 次失敗，全部是超過每頁 60 字上限</td></tr>
+  <tr><td>6 忠實度審查</td><td>4 輪，問題數 9 → 4 → 1 → 0（<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/slides/run-01/06-review-summary.md">摘要</a>）</td></tr>
+  <tr><td>7 渲染</td><td>20 頁、每頁有出處列、沒有溢出，20 張截圖</td></tr>
+  <tr><td>8 驗收</td><td>我看過成品後要求一項修改，重跑 4、5、6、7 後通過（<a href="https://github.com/RogerH0711/ic-design-flow-wiki/blob/main/slides/run-01/08-acceptance.md">紀錄</a>）</td></tr>
+</table>
+<ul>
+  <li>第 6 關第一輪抓到：總複習頁把流程分成 front／middle／back 三段，沒有任何證據卡這樣說；「來源沒涵蓋什麼」那一句也沒有卡片支持，所以退回第 3 關新增「缺口卡」和對應的檢查。</li>
+  <li>審查的教學意見指出 slack、DRC、LVS、antenna、IR drop、tap cell 沒解釋就使用，因此回第 3 關補卡。也指出 macro、die、core 等詞 Wiki 本身沒有定義，這些記回 Wiki 的 log 當作缺口。</li>
+  <li>第 5 關在審查退回後的重寫中連續 3 輪沒過字數檢查，依「最多 3 輪」的規則 AI 停下來問我，我決定再刪一個字繼續。</li>
+</ul>
+
+<h3>6. 反思</h3>
+<p><i>（以下三題由我自己回答；上面第 5 節是實際紀錄。）</i></p>
+<p><b>哪一個節點最常出錯？</b></p>
+<p>【請用自己的話寫。可參考的事實：以次數算，簡報第 5 關（逐頁稿）的字數檢查失敗 5 次；以嚴重程度算，ingest 的「寫頁面」這一步在獨立審查中被找出 148 個忠實度問題，而且 lint 完全抓不到。】</p>
+<p><b>發現問題後，把檢查往前移到了哪一個步驟？</b></p>
+<p>【請用自己的話寫。可參考的事實：(1) 原本只有 lint，做完兩篇後在 ingest 的 commit 之前加了獨立審查；(2) 設計簡報流程時，把忠實度檢查放到第 3 關證據卡，而不是等成品出來才審。】</p>
+<p><b>有沒有因此修改 workflow / graph？為什麼？</b></p>
+<p>【請用自己的話寫。可參考的事實：(1) AGENTS.md §8 新增第 6 步獨立審查；(2) S1、S2 事後補審；(3) 簡報 graph 第 3 關新增「缺口卡」；(4) 驗收時對調第 4、5 頁；(5) run-log 規則改成允許附加 note 紀錄我的決定。】</p>
+
+<h3>AI 使用說明</h3>
+<p>本作業使用 Claude（coding agent 模式）。需求訪談的回答、主題與來源的選定、每個人工關卡的決定（是否加入獨立審查、階段頁的切法、大綱、成品驗收與修改）是我做的；AGENTS.md、Wiki 頁面、檢查腳本、workflow 文件與簡報由 AI 依照上述流程產生，獨立審查由另開的 AI sub-agent 執行。第 6 節反思為我自己撰寫。</p>

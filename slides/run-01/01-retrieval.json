@@ -1,0 +1,98 @@
+{
+  "topic": "How a digital chip gets from RTL to GDSII",
+  "entry": "wiki/index.md",
+  "pages": [
+    {
+      "page": "stages/specification.md",
+      "why": "stage 1"
+    },
+    {
+      "page": "stages/rtl-design.md",
+      "why": "stage 2"
+    },
+    {
+      "page": "stages/functional-verification.md",
+      "why": "stage 3"
+    },
+    {
+      "page": "stages/logic-synthesis.md",
+      "why": "stage 4"
+    },
+    {
+      "page": "stages/floorplanning.md",
+      "why": "stage 5"
+    },
+    {
+      "page": "stages/placement.md",
+      "why": "stage 6"
+    },
+    {
+      "page": "stages/clock-tree-synthesis.md",
+      "why": "stage 7"
+    },
+    {
+      "page": "stages/routing.md",
+      "why": "stage 8"
+    },
+    {
+      "page": "stages/layout-finishing.md",
+      "why": "stage 9"
+    },
+    {
+      "page": "stages/signoff.md",
+      "why": "stage 10"
+    },
+    {
+      "page": "concepts/asic-design-flow.md",
+      "why": "overview of the whole flow and how sources divide it"
+    },
+    {
+      "page": "concepts/rtl.md",
+      "why": "vocabulary: RTL and HDL"
+    },
+    {
+      "page": "concepts/netlist.md",
+      "why": "vocabulary: netlist"
+    },
+    {
+      "page": "concepts/standard-cell-library.md",
+      "why": "vocabulary: cells"
+    },
+    {
+      "page": "concepts/pdk.md",
+      "why": "vocabulary: PDK"
+    },
+    {
+      "page": "concepts/coverage.md",
+      "why": "how verification knows it is done"
+    },
+    {
+      "page": "concepts/timing-violations.md",
+      "why": "setup and hold"
+    },
+    {
+      "page": "concepts/static-timing-analysis.md",
+      "why": "how timing is checked"
+    },
+    {
+      "page": "concepts/clock-skew.md",
+      "why": "why the clock tree matters for hold"
+    },
+    {
+      "page": "concepts/timing-closure.md",
+      "why": "source difference on the term"
+    },
+    {
+      "page": "concepts/drc.md",
+      "why": "signoff check and a source difference"
+    },
+    {
+      "page": "concepts/lvs.md",
+      "why": "signoff check"
+    },
+    {
+      "page": "concepts/tape-out.md",
+      "why": "end of the flow"
+    }
+  ]
+}

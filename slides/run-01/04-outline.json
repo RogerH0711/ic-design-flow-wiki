@@ -1,0 +1,258 @@
+{
+  "deck": "From RTL to GDSII: how a digital chip gets made",
+  "audience": "second-year computer science students who know logic gates and flip-flops",
+  "approved_by_owner": null,
+  "slides": [
+    {
+      "n": 1,
+      "kind": "title",
+      "title": "From RTL to GDSII: how a digital chip gets made",
+      "purpose": "Say what the deck covers and who it is for.",
+      "cards": []
+    },
+    {
+      "n": 2,
+      "kind": "agenda",
+      "title": "What you will be able to explain afterwards",
+      "purpose": "Set three learning goals and show the route through the deck.",
+      "cards": []
+    },
+    {
+      "n": 3,
+      "kind": "content",
+      "title": "What is an ASIC, and what is a design flow?",
+      "purpose": "Define the two terms the whole deck depends on.",
+      "cards": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "n": 4,
+      "kind": "content",
+      "title": "The flow at a glance: five steps",
+      "purpose": "Give the map before the details.",
+      "cards": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ]
+    },
+    {
+      "n": 5,
+      "kind": "content",
+      "title": "Six words you need first",
+      "purpose": "Define RTL, HDL, netlist, cell, library, PDK before they are used.",
+      "cards": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ]
+    },
+    {
+      "n": 6,
+      "kind": "content",
+      "title": "Stage 1: Specification",
+      "purpose": "What is decided before any code exists, in one project's process.",
+      "cards": [
+        "SP1",
+        "SP2",
+        "SP3",
+        "SP4",
+        "SP5"
+      ]
+    },
+    {
+      "n": 7,
+      "kind": "content",
+      "title": "Stage 2: RTL design",
+      "purpose": "How the design is written down, and the rules that keep it synthesizable.",
+      "cards": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7"
+      ]
+    },
+    {
+      "n": 8,
+      "kind": "content",
+      "title": "Stage 3: Functional verification",
+      "purpose": "How the design is shown to do what was specified.",
+      "cards": [
+        "FV1",
+        "FV2",
+        "FV3",
+        "FV4",
+        "FV5",
+        "FV6",
+        "FV7",
+        "FV8"
+      ]
+    },
+    {
+      "n": 9,
+      "kind": "content",
+      "title": "When have we tested enough? Coverage",
+      "purpose": "Explain the two kinds of coverage and why both are needed.",
+      "cards": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ]
+    },
+    {
+      "n": 10,
+      "kind": "content",
+      "title": "Stage 4: Logic synthesis",
+      "purpose": "From RTL to a netlist of real cells.",
+      "cards": [
+        "LS1",
+        "LS2",
+        "LS3",
+        "LS4",
+        "LS5",
+        "LS6",
+        "LS7"
+      ]
+    },
+    {
+      "n": 11,
+      "kind": "content",
+      "title": "Stage 5: Floorplanning",
+      "purpose": "What is fixed on the chip before any standard cell is placed.",
+      "cards": [
+        "FP1",
+        "FP2",
+        "FP3",
+        "FP4",
+        "FP5",
+        "FP6"
+      ]
+    },
+    {
+      "n": 12,
+      "kind": "content",
+      "title": "Stage 6: Placement",
+      "purpose": "Where the cells go, and the first timing repair.",
+      "cards": [
+        "PL1",
+        "PL2",
+        "PL3",
+        "PL4",
+        "PL5"
+      ]
+    },
+    {
+      "n": 13,
+      "kind": "content",
+      "title": "Timing in one slide: setup, hold, slack",
+      "purpose": "Give the timing vocabulary needed for the next three stages.",
+      "cards": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7"
+      ]
+    },
+    {
+      "n": 14,
+      "kind": "content",
+      "title": "Stage 7: Clock tree synthesis",
+      "purpose": "Why the clock needs its own stage.",
+      "cards": [
+        "CT1",
+        "CT2",
+        "CT3",
+        "CT4",
+        "CT5",
+        "CT6"
+      ]
+    },
+    {
+      "n": 15,
+      "kind": "content",
+      "title": "Stage 8: Routing",
+      "purpose": "Connecting everything, in two passes.",
+      "cards": [
+        "RT1",
+        "RT2",
+        "RT3",
+        "RT4",
+        "RT5",
+        "RT6"
+      ]
+    },
+    {
+      "n": 16,
+      "kind": "content",
+      "title": "Stage 9: Layout finishing",
+      "purpose": "The last steps that produce the GDSII file.",
+      "cards": [
+        "LF1",
+        "LF2",
+        "LF3",
+        "LF4",
+        "LF5"
+      ]
+    },
+    {
+      "n": 17,
+      "kind": "content",
+      "title": "Stage 10: Signoff",
+      "purpose": "The four checks before tape-out.",
+      "cards": [
+        "SG1",
+        "SG2",
+        "SG3",
+        "SG4",
+        "SG5",
+        "SG6",
+        "SG7"
+      ]
+    },
+    {
+      "n": 18,
+      "kind": "content",
+      "title": "Where the sources disagree",
+      "purpose": "Show that the flow is not described the same way everywhere.",
+      "cards": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "n": 19,
+      "kind": "recap",
+      "title": "The whole flow on one page, and what our sources do not cover",
+      "purpose": "Recap the ten stages with input and output, and name the four open gaps.",
+      "cards": []
+    },
+    {
+      "n": 20,
+      "kind": "quiz",
+      "title": "Check yourself",
+      "purpose": "Five questions the reader should now be able to answer, with the slide that answers each.",
+      "cards": []
+    }
+  ]
+}

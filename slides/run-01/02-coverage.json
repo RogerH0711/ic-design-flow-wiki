@@ -1,0 +1,142 @@
+{
+  "stages": [
+    {
+      "order": 1,
+      "page": "stages/specification.md",
+      "sections": {
+        "Purpose": 2,
+        "Inputs": 1,
+        "Outputs": 2,
+        "What happens": 5,
+        "Checks": 2
+      },
+      "cited_statements": 12,
+      "gaps": []
+    },
+    {
+      "order": 2,
+      "page": "stages/rtl-design.md",
+      "sections": {
+        "Purpose": 1,
+        "Inputs": 1,
+        "Outputs": 1,
+        "What happens": 13,
+        "Checks": 5
+      },
+      "cited_statements": 23,
+      "gaps": []
+    },
+    {
+      "order": 3,
+      "page": "stages/functional-verification.md",
+      "sections": {
+        "Purpose": 2,
+        "Inputs": 2,
+        "Outputs": 1,
+        "What happens": 16,
+        "Checks": 8
+      },
+      "cited_statements": 30,
+      "gaps": []
+    },
+    {
+      "order": 4,
+      "page": "stages/logic-synthesis.md",
+      "sections": {
+        "Purpose": 3,
+        "Inputs": 2,
+        "Outputs": 2,
+        "What happens": 8,
+        "Checks": 4
+      },
+      "cited_statements": 19,
+      "gaps": []
+    },
+    {
+      "order": 5,
+      "page": "stages/floorplanning.md",
+      "sections": {
+        "Purpose": 2,
+        "Inputs": 2,
+        "Outputs": 1,
+        "What happens": 7,
+        "Checks": 2
+      },
+      "cited_statements": 14,
+      "gaps": []
+    },
+    {
+      "order": 6,
+      "page": "stages/placement.md",
+      "sections": {
+        "Purpose": 1,
+        "Inputs": 2,
+        "Outputs": 2,
+        "What happens": 3,
+        "Checks": 2
+      },
+      "cited_statements": 11,
+      "gaps": []
+    },
+    {
+      "order": 7,
+      "page": "stages/clock-tree-synthesis.md",
+      "sections": {
+        "Purpose": 1,
+        "Inputs": 1,
+        "Outputs": 2,
+        "What happens": 5,
+        "Checks": 3
+      },
+      "cited_statements": 13,
+      "gaps": []
+    },
+    {
+      "order": 8,
+      "page": "stages/routing.md",
+      "sections": {
+        "Purpose": 1,
+        "Inputs": 0,
+        "Outputs": 2,
+        "What happens": 5,
+        "Checks": 3
+      },
+      "cited_statements": 13,
+      "gaps": [
+        "Inputs"
+      ]
+    },
+    {
+      "order": 9,
+      "page": "stages/layout-finishing.md",
+      "sections": {
+        "Purpose": 2,
+        "Inputs": 2,
+        "Outputs": 3,
+        "What happens": 3,
+        "Checks": 3
+      },
+      "cited_statements": 13,
+      "gaps": []
+    },
+    {
+      "order": 10,
+      "page": "stages/signoff.md",
+      "sections": {
+        "Purpose": 1,
+        "Inputs": 2,
+        "Outputs": 4,
+        "What happens": 5,
+        "Checks": 4
+      },
+      "cited_statements": 20,
+      "gaps": []
+    }
+  ],
+  "all_gaps": [
+    "concepts/coverage.md",
+    "concepts/standard-cell-library.md",
+    "stages/routing.md",
+    "tools/cocotb.md"
+  ]
+}

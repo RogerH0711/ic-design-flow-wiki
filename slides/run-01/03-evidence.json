@@ -1,0 +1,868 @@
+{
+  "cards": [
+    {
+      "id": "A1",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "An ASIC, an application-specific integrated circuit, is silicon manufactured to carry out a specific function. [S4 §ASIC]",
+      "citations": [
+        "S4 §ASIC"
+      ],
+      "point": "An ASIC is silicon made for one specific function."
+    },
+    {
+      "id": "A2",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "The ASIC design flow is the series of steps that takes a chip from an idea to the data used for fabrication. Each step is supported by electronic design automation (EDA) tools. [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "The design flow is the series of steps from idea to fabrication data, each supported by EDA tools."
+    },
+    {
+      "id": "A3",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "Designing an ASIC takes considerable expertise and can last several months; following a proven flow keeps the work on schedule. [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "It can take months; a proven flow keeps the work on schedule."
+    },
+    {
+      "id": "A4",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "The part from synthesis to the final layout file can be run automatically, without human intervention. [S1 §Running The Automated RTL-to-GDS Flow]",
+      "citations": [
+        "S1 §Running The Automated RTL-to-GDS Flow"
+      ],
+      "point": "From synthesis to the final layout file the flow can run automatically."
+    },
+    {
+      "id": "F1",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "Design entry: the design is described in a hardware description language, usually at the register transfer level. See [RTL Design](../stages/rtl-design.md). [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "Step 1: design entry in an HDL, usually at RTL."
+    },
+    {
+      "id": "F2",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "[Functional verification](../stages/functional-verification.md): simulation and formal verification confirm that the design behaves as required. [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "Step 2: functional verification."
+    },
+    {
+      "id": "F3",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "[Synthesis](../stages/logic-synthesis.md): the description is converted into a [netlist](netlist.md). [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "Step 3: synthesis into a netlist."
+    },
+    {
+      "id": "F4",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "Physical implementation: the netlist is turned into a layout through [floorplanning](../stages/floorplanning.md), [placement](../stages/placement.md), [clock tree synthesis](../stages/clock-tree-synthesis.md), and [routing](../stages/routing.md). [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "Step 4: physical implementation: floorplanning, placement, clock tree synthesis, routing."
+    },
+    {
+      "id": "F5",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "[Signoff](../stages/signoff.md): final checks before the layout is sent for manufacturing. [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "Step 5: signoff."
+    },
+    {
+      "id": "V1",
+      "page": "concepts/rtl.md",
+      "wiki_sentence": "The register-transfer level (RTL) is a way of describing a circuit at a high level in a hardware description language. Lower-level descriptions, and eventually the real wiring, are derived from it. [S4 §RTL]",
+      "citations": [
+        "S4 §RTL"
+      ],
+      "point": "RTL: a high-level description of a circuit in an HDL."
+    },
+    {
+      "id": "V2",
+      "page": "concepts/rtl.md",
+      "wiki_sentence": "A hardware description language (HDL) is a computer language for describing the structure or the behavior of a hardware chip. Verilog and VHDL are the best known. [S4 §HDL]",
+      "citations": [
+        "S4 §HDL"
+      ],
+      "point": "HDL: a language for describing hardware; Verilog and VHDL."
+    },
+    {
+      "id": "V3",
+      "page": "concepts/netlist.md",
+      "wiki_sentence": "A netlist is a representation of a circuit as pre-hardened elements, that is, standard cells and macros, and the connections between them. [S4 §Netlist]",
+      "citations": [
+        "S4 §Netlist"
+      ],
+      "point": "Netlist: standard cells and macros plus their connections."
+    },
+    {
+      "id": "V4",
+      "page": "concepts/standard-cell-library.md",
+      "wiki_sentence": "A cell is another name for a CMOS logic gate. [S3 §Modeling CMOS Cells]",
+      "citations": [
+        "S3 §Modeling CMOS Cells"
+      ],
+      "point": "Cell: another name for a CMOS logic gate."
+    },
+    {
+      "id": "V5",
+      "page": "concepts/standard-cell-library.md",
+      "wiki_sentence": "A standard cell library typically contains several sizes of the same cell. [S3 §Timing Optimizations]",
+      "citations": [
+        "S3 §Timing Optimizations"
+      ],
+      "point": "A library has several sizes of the same cell."
+    },
+    {
+      "id": "V6",
+      "page": "concepts/pdk.md",
+      "wiki_sentence": "A process design kit (PDK) describes one fabrication process to the design tools. It is a set of files, and the tools used to design a chip rely on it as their model of that process. [S4 §PDK]",
+      "citations": [
+        "S4 §PDK"
+      ],
+      "point": "PDK: the files that model one fabrication process for the tools."
+    },
+    {
+      "id": "SP1",
+      "page": "stages/specification.md",
+      "wiki_sentence": "In the OpenTitan project, Specification is the first of three broad stages in the life of a design. [S8 §Stages of a Design]",
+      "citations": [
+        "S8 §Stages of a Design"
+      ],
+      "point": "In OpenTitan, Specification is the first of three broad stages."
+    },
+    {
+      "id": "SP2",
+      "page": "stages/specification.md",
+      "wiki_sentence": "The concept is written up as a brief proposal with the basic features and goes through a request-for-comment process. [S8 §Concept and RFC]",
+      "citations": [
+        "S8 §Concept and RFC"
+      ],
+      "point": "A concept becomes a brief proposal and goes through a request for comment."
+    },
+    {
+      "id": "SP3",
+      "page": "stages/specification.md",
+      "wiki_sentence": "After the feature set and high-level description have been reviewed, the full detailed specification is completed. [S8 §Detailed Specification]",
+      "citations": [
+        "S8 §Detailed Specification"
+      ],
+      "point": "After review, the full detailed specification is completed."
+    },
+    {
+      "id": "SP4",
+      "page": "stages/specification.md",
+      "wiki_sentence": "The specification is published to the wider team, and the authors answer comments and questions and keep refining it. [S8 §Specification Publication]",
+      "citations": [
+        "S8 §Specification Publication"
+      ],
+      "point": "It is published to the team and refined from comments."
+    },
+    {
+      "id": "SP5",
+      "page": "stages/specification.md",
+      "wiki_sentence": "Three reviews are mentioned: an initial review of the feature set and high-level description, a potential security review, and a further detailed review of the full specification by other project members. [S8 §Detailed Specification]",
+      "citations": [
+        "S8 §Detailed Specification"
+      ],
+      "point": "Three reviews are mentioned."
+    },
+    {
+      "id": "R1",
+      "page": "stages/rtl-design.md",
+      "wiki_sentence": "The design is written down in a hardware description language such as Verilog. For digital designs this is normally done at the register transfer level (RTL). [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "The design is written in an HDL, normally at RTL."
+    },
+    {
+      "id": "R2",
+      "page": "stages/rtl-design.md",
+      "wiki_sentence": "Only a subset of Verilog can be synthesized; it is defined in its own IEEE standard. [S5 §Features of synthesizable Verilog]",
+      "citations": [
+        "S5 §Features of synthesizable Verilog"
+      ],
+      "point": "Only a subset of Verilog can be synthesized."
+    },
+    {
+      "id": "R3",
+      "page": "stages/rtl-design.md",
+      "wiki_sentence": "Clocked logic uses non-blocking assignments and purely combinational logic uses blocking assignments. [S9 §Blocking and Non-blocking Assignments]",
+      "citations": [
+        "S9 §Blocking and Non-blocking Assignments"
+      ],
+      "point": "Non-blocking assignments for clocked logic, blocking for combinational."
+    },
+    {
+      "id": "R4",
+      "page": "stages/rtl-design.md",
+      "wiki_sentence": "Flip-flops are used in place of latches unless a latch is absolutely necessary. [S9 §Sequential Logic (Latches)]",
+      "citations": [
+        "S9 §Sequential Logic (Latches)"
+      ],
+      "point": "Flip-flops in place of latches."
+    },
+    {
+      "id": "R5",
+      "page": "stages/rtl-design.md",
+      "wiki_sentence": "A state machine has three parts: an enumeration of its states, a combinational block that computes the next state, and a clocked block that updates the state. [S9 §Finite State Machines]",
+      "citations": [
+        "S9 §Finite State Machines"
+      ],
+      "point": "A state machine has three parts."
+    },
+    {
+      "id": "R6",
+      "page": "stages/rtl-design.md",
+      "wiki_sentence": "Simulation and synthesis disagreeing. Assigning `X` to mark don't-care conditions can cause such mismatches, and so can a latch inferred inside a function. [S9 §Don't Cares (`X`'s)] [S9 §Combinational Logic]",
+      "citations": [
+        "S9 §Combinational Logic",
+        "S9 §Don't Cares (`X`'s)"
+      ],
+      "point": "Risk: simulation and synthesis disagreeing."
+    },
+    {
+      "id": "R7",
+      "page": "stages/rtl-design.md",
+      "wiki_sentence": "[Verilator](../tools/verilator.md) lints the SystemVerilog code it is given as part of its normal use. [S7 §Overview]",
+      "citations": [
+        "S7 §Overview"
+      ],
+      "point": "Verilator lints the code it is given."
+    },
+    {
+      "id": "FV1",
+      "page": "stages/functional-verification.md",
+      "wiki_sentence": "Functional verification makes sure that the design behaves as its requirements say it should. [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "It makes sure the design behaves as its requirements say."
+    },
+    {
+      "id": "FV2",
+      "page": "stages/functional-verification.md",
+      "wiki_sentence": "Two techniques are combined: simulation of the hardware description, and formal verification. [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "Simulation and formal verification are combined."
+    },
+    {
+      "id": "FV3",
+      "page": "stages/functional-verification.md",
+      "wiki_sentence": "The RTL, and later the gate-level [netlist](../concepts/netlist.md): the tutorial calls it essential to verify both. [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "Both the RTL and the gate-level netlist are verified."
+    },
+    {
+      "id": "FV4",
+      "page": "stages/functional-verification.md",
+      "wiki_sentence": "Testing grows in steps. First a basic smoke test brings the design out of reset and exercises a major data path. [S10 §Basic Smoke Test]",
+      "citations": [
+        "S10 §Basic Smoke Test"
+      ],
+      "point": "Testing starts with a basic smoke test."
+    },
+    {
+      "id": "FV5",
+      "page": "stages/functional-verification.md",
+      "wiki_sentence": "Stress tests exercise several interfaces or features at once and are well suited to finding bugs and closing coverage. [S10 §Stress Tests]",
+      "citations": [
+        "S10 §Stress Tests"
+      ],
+      "point": "Stress tests exercise several features at once."
+    },
+    {
+      "id": "FV6",
+      "page": "stages/functional-verification.md",
+      "wiki_sentence": "All simulations are run regularly as a [regression](../concepts/regression.md). [S10 §Nightly]",
+      "citations": [
+        "S10 §Nightly"
+      ],
+      "point": "All simulations are run regularly as a regression."
+    },
+    {
+      "id": "FV7",
+      "page": "stages/functional-verification.md",
+      "wiki_sentence": "The effort is split into verification stages, each with a checklist of tasks; only when every item in every stage's checklist is ticked does the project call verification complete. [S10 §Defining Verification Complete: Stages and Checklists]",
+      "citations": [
+        "S10 §Defining Verification Complete: Stages and Checklists"
+      ],
+      "point": "Verification is complete when every checklist item of every stage is ticked."
+    },
+    {
+      "id": "FV8",
+      "page": "stages/functional-verification.md",
+      "wiki_sentence": "The design being verified is called the design under test, or DUT. [S10 §Design Verification Methodology within OpenTitan]",
+      "citations": [
+        "S10 §Design Verification Methodology within OpenTitan"
+      ],
+      "point": "The design being verified is the DUT."
+    },
+    {
+      "id": "C1",
+      "page": "concepts/coverage.md",
+      "wiki_sentence": "There are two key kinds of coverage metric: code coverage and functional coverage. [S10 §Coverage Collection]",
+      "citations": [
+        "S10 §Coverage Collection"
+      ],
+      "point": "Two kinds of coverage: code and functional."
+    },
+    {
+      "id": "C2",
+      "page": "concepts/coverage.md",
+      "wiki_sentence": "Code coverage is extracted automatically by the simulator from structures in the design such as lines, branches, state machines, conditions, and toggling signals. It needs no extra work, and is sometimes called implicit coverage. [S10 §Code Coverage]",
+      "citations": [
+        "S10 §Code Coverage"
+      ],
+      "point": "Code coverage is extracted automatically by the simulator."
+    },
+    {
+      "id": "C3",
+      "page": "concepts/coverage.md",
+      "wiki_sentence": "Functional coverage needs the designer or verification engineer to write cover points, which record whether signals have taken an interesting set or sequence of values. It is sometimes called explicit coverage. [S10 §Functional Coverage]",
+      "citations": [
+        "S10 §Functional Coverage"
+      ],
+      "point": "Functional coverage needs hand-written cover points."
+    },
+    {
+      "id": "C4",
+      "page": "concepts/coverage.md",
+      "wiki_sentence": "Coverage answers the question of when testing is done, and it exposes flaws: bugs, and places where the design falls short of its specification. [S10 §Coverage Collection]",
+      "citations": [
+        "S10 §Coverage Collection"
+      ],
+      "point": "Coverage answers: when are we done testing?"
+    },
+    {
+      "id": "C5",
+      "page": "concepts/coverage.md",
+      "wiki_sentence": "Both kinds are needed. Full code coverage shows that all code ran, not that it does the right thing; full functional coverage can still leave part of the design unexercised, which code coverage would reveal. [S10 §Do we need both types of coverage]",
+      "citations": [
+        "S10 §Do we need both types of coverage"
+      ],
+      "point": "Both kinds are needed."
+    },
+    {
+      "id": "C6",
+      "page": "concepts/coverage.md",
+      "wiki_sentence": "Gaps must be understood and then either closed with more tests or waived; working toward 100 percent this way is called coverage closure. [S10 §Coverage Collection]",
+      "citations": [
+        "S10 §Coverage Collection"
+      ],
+      "point": "Gaps are closed with tests or waived: coverage closure."
+    },
+    {
+      "id": "LS1",
+      "page": "stages/logic-synthesis.md",
+      "wiki_sentence": "When software, and not a person, turns a higher-level description of a circuit into a lower-level one that behaves the same, the step is called synthesis. [S5 §Levels of abstraction]",
+      "citations": [
+        "S5 §Levels of abstraction"
+      ],
+      "point": "Synthesis: software turns a higher-level description into an equivalent lower-level one."
+    },
+    {
+      "id": "LS2",
+      "page": "stages/logic-synthesis.md",
+      "wiki_sentence": "Synthesis converts the hardware description of the design into a [netlist](../concepts/netlist.md), a circuit built from logic cells. [S2 §Newcomers' Tutorial]",
+      "citations": [
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "The result is a netlist built from logic cells."
+    },
+    {
+      "id": "LS3",
+      "page": "stages/logic-synthesis.md",
+      "wiki_sentence": "Logic synthesis faces two challenges: finding optimizations within the gate-level netlist, and mapping that netlist well onto an equivalent one made of gate types that are physically available. [S5 §Logical gate level]",
+      "citations": [
+        "S5 §Logical gate level"
+      ],
+      "point": "Two challenges: optimize the netlist, map it to gates that exist."
+    },
+    {
+      "id": "LS4",
+      "page": "stages/logic-synthesis.md",
+      "wiki_sentence": "The user can steer optimization toward area (`ABC_AREA=1`) or toward timing (`ABC_SPEED=1`). [S1 §Area And Timing Optimization]",
+      "citations": [
+        "S1 §Area And Timing Optimization"
+      ],
+      "point": "Optimization can be steered toward area or timing."
+    },
+    {
+      "id": "LS5",
+      "page": "stages/logic-synthesis.md",
+      "wiki_sentence": "The design's Verilog files, named by the `VERILOG_FILES` variable. [S1 §Design Configuration]",
+      "citations": [
+        "S1 §Design Configuration"
+      ],
+      "point": "Input: the Verilog files."
+    },
+    {
+      "id": "LS6",
+      "page": "stages/logic-synthesis.md",
+      "wiki_sentence": "The timing constraints in an [SDC](../formats/sdc.md) file, named by `SDC_FILE`. [S1 §Design Configuration]",
+      "citations": [
+        "S1 §Design Configuration"
+      ],
+      "point": "Input: timing constraints in an SDC file."
+    },
+    {
+      "id": "LS7",
+      "page": "stages/logic-synthesis.md",
+      "wiki_sentence": "The synthesis results are verified again by simulation, and whenever the design description changes, synthesis is rerun and re-verified. [S5 §Script-based synthesis flows]",
+      "citations": [
+        "S5 §Script-based synthesis flows"
+      ],
+      "point": "Synthesis results are verified again by simulation."
+    },
+    {
+      "id": "FP1",
+      "page": "stages/floorplanning.md",
+      "wiki_sentence": "A size target, given either as explicit die and core areas [S1 §Floorplan Initialization Based On Core And Die Area] or as a core utilization percentage. [S1 §Floorplan Based On Core Utilization]",
+      "citations": [
+        "S1 §Floorplan Based On Core Utilization",
+        "S1 §Floorplan Initialization Based On Core And Die Area"
+      ],
+      "point": "Input: a size target, as areas or as a utilization."
+    },
+    {
+      "id": "FP2",
+      "page": "stages/floorplanning.md",
+      "wiki_sentence": "I/O pins are placed on the die boundary, on the track grid, so that net wirelength is kept small; each pin gets a metal shape. [S1 §IO Pin Placement] When the block will later sit inside a larger design, its pins should instead be assigned to the sides that suit the top-level connections, which is done with a pin order file. [S2 §Adding custom pin placement configuration]",
+      "citations": [
+        "S1 §IO Pin Placement",
+        "S2 §Adding custom pin placement configuration"
+      ],
+      "point": "I/O pins are placed on the die boundary."
+    },
+    {
+      "id": "FP3",
+      "page": "stages/floorplanning.md",
+      "wiki_sentence": "Macros are placed; widening the halo around them gives better routing resources. [S1 §Macro Placement With Halo Spacing]",
+      "citations": [
+        "S1 §Macro Placement With Halo Spacing"
+      ],
+      "point": "Macros are placed."
+    },
+    {
+      "id": "FP4",
+      "page": "stages/floorplanning.md",
+      "wiki_sentence": "Tap cells are placed after macro placement and power rail creation; endcap cells go at both ends of each row. [S1 §Tapcell insertion]",
+      "citations": [
+        "S1 §Tapcell insertion"
+      ],
+      "point": "Tap cells and endcap cells are added."
+    },
+    {
+      "id": "FP5",
+      "page": "stages/floorplanning.md",
+      "wiki_sentence": "A power grid is created for the design. [S1 §Power Planning And Analysis]",
+      "citations": [
+        "S1 §Power Planning And Analysis"
+      ],
+      "point": "A power grid is created."
+    },
+    {
+      "id": "FP6",
+      "page": "stages/floorplanning.md",
+      "wiki_sentence": "[IR drop](../concepts/ir-drop.md) analysis reports the worst voltage drop and worst current density in the power grid and looks for floating power stripes. [S1 §IR Drop Analysis]",
+      "citations": [
+        "S1 §IR Drop Analysis"
+      ],
+      "point": "Check: IR drop analysis of the power grid."
+    },
+    {
+      "id": "PL1",
+      "page": "stages/placement.md",
+      "wiki_sentence": "The tutorial explores placement options for macros and standard cells and their impact on area and timing; placement density affects how widely the standard cells are spread over the core area. [S1 §Macro Placement]",
+      "citations": [
+        "S1 §Macro Placement"
+      ],
+      "point": "Placement options affect area and timing; density sets how spread out cells are."
+    },
+    {
+      "id": "PL2",
+      "page": "stages/placement.md",
+      "wiki_sentence": "`PLACE_DENSITY`, the desired cell density, where 1 means tightly packed and 0 means widely spread. [S1 §Design Configuration]",
+      "citations": [
+        "S1 §Design Configuration"
+      ],
+      "point": "Input: placement density from 0 (spread) to 1 (packed)."
+    },
+    {
+      "id": "PL3",
+      "page": "stages/placement.md",
+      "wiki_sentence": "The flow's list of steps includes global placement, detailed placement, and timing optimization with a resizer. [S1 §Running The Automated RTL-to-GDS Flow]",
+      "citations": [
+        "S1 §Running The Automated RTL-to-GDS Flow"
+      ],
+      "point": "Global placement, detailed placement, then timing optimization with a resizer."
+    },
+    {
+      "id": "PL4",
+      "page": "stages/placement.md",
+      "wiki_sentence": "A design-repair step inserts buffers to fix maximum slew, maximum capacitance, and maximum fanout violations, buffers long wires to cut their RC delay, and resizes gates; it works from parasitics estimated after placement. [S1 §Timing Optimization Using repair_design]",
+      "citations": [
+        "S1 §Timing Optimization Using repair_design"
+      ],
+      "point": "A repair step inserts buffers and resizes gates."
+    },
+    {
+      "id": "PL5",
+      "page": "stages/placement.md",
+      "wiki_sentence": "Timing optimization enlarges the design. If more buffer insertion is allowed, rerunning with a lower core utilization is recommended to avoid routing congestion. [S3 §Tips for Achieving Timing Closure]",
+      "citations": [
+        "S3 §Tips for Achieving Timing Closure"
+      ],
+      "point": "Timing optimization enlarges the design."
+    },
+    {
+      "id": "T1",
+      "page": "concepts/timing-violations.md",
+      "wiki_sentence": "A timing violation exists when data reaches the end of a timing path at the wrong moment compared with when it is required. It shows up as negative slack. [S2 §STA]",
+      "citations": [
+        "S2 §STA"
+      ],
+      "point": "A timing violation: data arrives at the wrong moment; negative slack."
+    },
+    {
+      "id": "T2",
+      "page": "concepts/timing-violations.md",
+      "wiki_sentence": "Setup violation: the data arrives after it is required. [S2 §STA]",
+      "citations": [
+        "S2 §STA"
+      ],
+      "point": "Setup violation: data arrives too late."
+    },
+    {
+      "id": "T3",
+      "page": "concepts/timing-violations.md",
+      "wiki_sentence": "Hold violation: the data arrives before it is required. [S2 §STA]",
+      "citations": [
+        "S2 §STA"
+      ],
+      "point": "Hold violation: data arrives too early."
+    },
+    {
+      "id": "T4",
+      "page": "concepts/timing-violations.md",
+      "wiki_sentence": "Both come from what a flip-flop needs: its input must be stable for some time before the clock edge (the setup time) and for some time after it (the hold time). [S3 §Introduction]",
+      "citations": [
+        "S3 §Introduction"
+      ],
+      "point": "A flip-flop needs stable input before and after the clock edge."
+    },
+    {
+      "id": "T5",
+      "page": "concepts/static-timing-analysis.md",
+      "wiki_sentence": "Static timing analysis (STA) finds the timing paths of a design and, at the end of every path, works out when data actually arrives, at the earliest and at the latest, and when it is required to arrive. [S2 §STA]",
+      "citations": [
+        "S2 §STA"
+      ],
+      "point": "STA computes actual and required arrival times on every path."
+    },
+    {
+      "id": "T6",
+      "page": "concepts/timing-violations.md",
+      "wiki_sentence": "A flip-flop whose setup or hold time is not respected becomes metastable: the value it stores is unknown, and so is the state of the whole system. [S3 §Introduction]",
+      "citations": [
+        "S3 §Introduction"
+      ],
+      "point": "A violated flip-flop becomes metastable."
+    },
+    {
+      "id": "T7",
+      "page": "concepts/static-timing-analysis.md",
+      "wiki_sentence": "What it guarantees is correct operation of the circuit in time; whether the function itself is the right one is outside its reach. [S2 §STA]",
+      "citations": [
+        "S2 §STA"
+      ],
+      "point": "STA says nothing about whether the function is right."
+    },
+    {
+      "id": "CT1",
+      "page": "stages/clock-tree-synthesis.md",
+      "wiki_sentence": "Clock tree synthesis builds a well-balanced clock tree once placement is finished. [S1 §Clock Tree Synthesis]",
+      "citations": [
+        "S1 §Clock Tree Synthesis"
+      ],
+      "point": "CTS builds a balanced clock tree after placement."
+    },
+    {
+      "id": "CT2",
+      "page": "stages/clock-tree-synthesis.md",
+      "wiki_sentence": "Clock buffers are inserted so that the tree structure is balanced. [S1 §Clock Tree Synthesis]",
+      "citations": [
+        "S1 §Clock Tree Synthesis"
+      ],
+      "point": "Clock buffers are inserted to balance the tree."
+    },
+    {
+      "id": "CT3",
+      "page": "stages/clock-tree-synthesis.md",
+      "wiki_sentence": "Clock skew is reported; the flow fixes skew problems that could later cause hold violations. [S1 §Reporting Clock Skews]",
+      "citations": [
+        "S1 §Reporting Clock Skews"
+      ],
+      "point": "Clock skew is reported and skew problems are fixed."
+    },
+    {
+      "id": "CT4",
+      "page": "stages/clock-tree-synthesis.md",
+      "wiki_sentence": "Timing repair for setup and hold violations runs after this stage, with propagated clocks. [S1 §Timing Optimization Using repair_timing]",
+      "citations": [
+        "S1 §Timing Optimization Using repair_timing"
+      ],
+      "point": "Timing repair runs after this stage."
+    },
+    {
+      "id": "CT5",
+      "page": "concepts/clock-skew.md",
+      "wiki_sentence": "Clock skew is the difference between the times at which the clock arrives at different flip-flops. [S3 §Timing Constraints]",
+      "citations": [
+        "S3 §Timing Constraints"
+      ],
+      "point": "Clock skew: the clock arrives at different times at different flip-flops."
+    },
+    {
+      "id": "CT6",
+      "page": "concepts/clock-skew.md",
+      "wiki_sentence": "Clock skew is the main cause of hold violations. [S3 §Tips for Achieving Timing Closure]",
+      "citations": [
+        "S3 §Tips for Achieving Timing Closure"
+      ],
+      "point": "Clock skew is the main cause of hold violations."
+    },
+    {
+      "id": "RT1",
+      "page": "stages/routing.md",
+      "wiki_sentence": "Routing is done in two passes. Global routing shares out the available routing resources, and only a design that passes it without violations goes on to detailed routing. [S1 §Global Routing]",
+      "citations": [
+        "S1 §Global Routing"
+      ],
+      "point": "Routing is done in two passes: global, then detailed."
+    },
+    {
+      "id": "RT2",
+      "page": "stages/routing.md",
+      "wiki_sentence": "The global router analyzes the routing resources and allocates them so as to avoid H/V overflow violations. [S1 §Global Routing]",
+      "citations": [
+        "S1 §Global Routing"
+      ],
+      "point": "The global router allocates routing resources."
+    },
+    {
+      "id": "RT3",
+      "page": "stages/routing.md",
+      "wiki_sentence": "The detailed router works through pin access analysis, track assignment, an initial detailed routing, and search and repair, and has its own DRC engine. [S1 §Detail Routing]",
+      "citations": [
+        "S1 §Detail Routing"
+      ],
+      "point": "The detailed router includes search and repair and a DRC engine."
+    },
+    {
+      "id": "RT4",
+      "page": "stages/routing.md",
+      "wiki_sentence": "A successful detailed routing run ends with zero violations. [S1 §Detail Routing]",
+      "citations": [
+        "S1 §Detail Routing"
+      ],
+      "point": "Success: zero violations."
+    },
+    {
+      "id": "RT5",
+      "page": "stages/routing.md",
+      "wiki_sentence": "Congestion: a design with a congestion problem makes global routing end with an error saying that routing congestion is too high. A congestion heat map shows where the problem is. [S1 §Debugging Problems in Global Routing]",
+      "citations": [
+        "S1 §Debugging Problems in Global Routing"
+      ],
+      "point": "Problem: congestion stops global routing."
+    },
+    {
+      "id": "RT6",
+      "page": "stages/routing.md",
+      "wiki_sentence": "An antenna check reports the nets with an [antenna violation](../concepts/antenna-violation.md). [S1 §Antenna Checker]",
+      "citations": [
+        "S1 §Antenna Checker"
+      ],
+      "point": "An antenna check reports violating nets."
+    },
+    {
+      "id": "LF1",
+      "page": "stages/layout-finishing.md",
+      "wiki_sentence": "Metal fill adds floating metal shapes in empty areas so that the metal density rules are met without breaking other design rules. It is mandatory at advanced process nodes, where it keeps the wafer evenly planarized. [S1 §Metal Fill]",
+      "citations": [
+        "S1 §Metal Fill"
+      ],
+      "point": "Metal fill adds floating metal to meet density rules."
+    },
+    {
+      "id": "LF2",
+      "page": "stages/layout-finishing.md",
+      "wiki_sentence": "Parasitics extraction computes the resistance, coupling capacitance, and ground capacitance of the routed wires and can write them to a [SPEF](../formats/spef.md) file. [S1 §Parasitics Extraction]",
+      "citations": [
+        "S1 §Parasitics Extraction"
+      ],
+      "point": "Parasitics extraction computes wire resistance and capacitance."
+    },
+    {
+      "id": "LF3",
+      "page": "stages/layout-finishing.md",
+      "wiki_sentence": "`6_final.gds`, the final layout in [GDSII](../formats/gdsii.md) form. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]",
+      "citations": [
+        "S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results"
+      ],
+      "point": "Output: the final layout in GDSII form."
+    },
+    {
+      "id": "LF4",
+      "page": "stages/layout-finishing.md",
+      "wiki_sentence": "Timing of the final design is reported as worst slack, total negative slack, and worst negative slack. [S1 §Timing]",
+      "citations": [
+        "S1 §Timing"
+      ],
+      "point": "Final timing is reported as worst slack, TNS, WNS."
+    },
+    {
+      "id": "LF5",
+      "page": "stages/layout-finishing.md",
+      "wiki_sentence": "The last of the flow's stages is called layout generation, with the clean target `clean_finish`. [S1 §Design Goals]",
+      "citations": [
+        "S1 §Design Goals"
+      ],
+      "point": "The last stage of the automated flow is called layout generation."
+    },
+    {
+      "id": "SG1",
+      "page": "stages/signoff.md",
+      "wiki_sentence": "Signoff is the last phase of implementation: physical and timing verification of the design before it is committed to manufacturing, an event known as tape-out. [S2 §Signoff Steps]",
+      "citations": [
+        "S2 §Signoff Steps"
+      ],
+      "point": "Signoff: physical and timing verification before tape-out."
+    },
+    {
+      "id": "SG2",
+      "page": "stages/signoff.md",
+      "wiki_sentence": "[DRC](../concepts/drc.md) checks the layout against the foundry's manufacturing rules, using two tools that cover each other's blind spots. [S2 §DRC]",
+      "citations": [
+        "S2 §DRC"
+      ],
+      "point": "DRC: layout against the foundry rules."
+    },
+    {
+      "id": "SG3",
+      "page": "stages/signoff.md",
+      "wiki_sentence": "[LVS](../concepts/lvs.md) confirms that the layout and the schematic have the same connectivity. [S2 §LVS]",
+      "citations": [
+        "S2 §LVS"
+      ],
+      "point": "LVS: layout and schematic have the same connectivity."
+    },
+    {
+      "id": "SG4",
+      "page": "stages/signoff.md",
+      "wiki_sentence": "[Static timing analysis](../concepts/static-timing-analysis.md) is run on the fully implemented design. Earlier runs during implementation are less accurate because the design is not finished. [S2 §STA]",
+      "citations": [
+        "S2 §STA"
+      ],
+      "point": "STA on the fully implemented design."
+    },
+    {
+      "id": "SG5",
+      "page": "stages/signoff.md",
+      "wiki_sentence": "The antenna check looks for [antenna violations](../concepts/antenna-violation.md). [S2 §Antenna Check]",
+      "citations": [
+        "S2 §Antenna Check"
+      ],
+      "point": "Antenna check."
+    },
+    {
+      "id": "SG6",
+      "page": "concepts/tape-out.md",
+      "wiki_sentence": "Tape-out ends IC design. Once every check has passed, the design goes to a fabrication facility, which makes the masks from the GDSII data or an equivalent format. [S4 §tape-out]",
+      "citations": [
+        "S4 §tape-out"
+      ],
+      "point": "Tape-out: the design goes to a fabrication facility."
+    },
+    {
+      "id": "SG7",
+      "page": "stages/signoff.md",
+      "wiki_sentence": "LVS: a clean run ends with the message that the circuits match uniquely. [S2 §LVS]",
+      "citations": [
+        "S2 §LVS"
+      ],
+      "point": "A clean LVS run says the circuits match uniquely."
+    },
+    {
+      "id": "D1",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "Physical implementation: S2 treats floorplanning, placement, clock tree synthesis, and routing as sub-steps of one step [S2 §Newcomers' Tutorial], while S1 lists floorplanning, macro placement, clock tree synthesis, and routing as individual flow stages, each with its own clean target. [S1 §Design Goals]",
+      "citations": [
+        "S1 §Design Goals",
+        "S2 §Newcomers' Tutorial"
+      ],
+      "point": "One step with four sub-steps (S2) or separate stages (S1)."
+    },
+    {
+      "id": "D2",
+      "page": "concepts/asic-design-flow.md",
+      "wiki_sentence": "The end of the flow: S2 ends with a signoff step made of DRC, LVS, STA, and an antenna check [S2 §Signoff Steps], while S1 has no stage called signoff and ends with layout generation. [S1 §Design Goals]",
+      "citations": [
+        "S1 §Design Goals",
+        "S2 §Signoff Steps"
+      ],
+      "point": "S2 ends with signoff; S1 has no such stage."
+    },
+    {
+      "id": "D3",
+      "page": "stages/signoff.md",
+      "wiki_sentence": "What signoff refers to: S2 uses the word for the last phase of implementation, the physical and timing checks on the layout [S2 §Signoff Steps]; S10 uses it for verification, as in the final review held once the verification effort is complete [S10 §Sign-off Reviews]; and S8 has a project stage called Signed off. [S8 §Stages of a Design]",
+      "citations": [
+        "S10 §Sign-off Reviews",
+        "S2 §Signoff Steps",
+        "S8 §Stages of a Design"
+      ],
+      "point": "Signoff means three different things in three sources."
+    },
+    {
+      "id": "D4",
+      "page": "concepts/drc.md",
+      "wiki_sentence": "Where it happens: S2 runs DRC as a signoff step on the finished layout, with two tools [S2 §DRC], while S1 reports DRC violations after routing, in a report that is empty when routing succeeded. [S1 §DRC Viewer]",
+      "citations": [
+        "S1 §DRC Viewer",
+        "S2 §DRC"
+      ],
+      "point": "DRC at signoff (S2) or after routing (S1)."
+    },
+    {
+      "id": "D5",
+      "page": "concepts/timing-closure.md",
+      "wiki_sentence": "What the term names: S3 defines timing closure as a process, the work of satisfying timing constraints through design transformations [S3 §Introduction], while S4 defines it as a state, said of a design in which timing analysis finds no violation at a given clock period and at all timing corners. [S4 §timing closure]",
+      "citations": [
+        "S3 §Introduction",
+        "S4 §timing closure"
+      ],
+      "point": "Timing closure: a process (S3) or a state (S4)."
+    }
+  ]
+}

@@ -129,9 +129,8 @@ all count.
    and the writer disagree, keep both views in the file and ask the owner.
 7. Commit: one source, one commit, message `Ingest S<n>: <title>`.
 
-The first two sources (S1, S2) were ingested before step 6 existed. The
-owner read the result and raised no problem, but they have had no
-independent review.
+The first two sources (S1, S2) were ingested before step 6 existed and
+were reviewed afterwards, on 2026-11-14, at the owner's request.
 
 ## 9. Definition of done
 

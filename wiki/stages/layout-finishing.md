@@ -10,7 +10,7 @@ updated: 2026-11-12
 
 ## Purpose
 
-The last stage of the flow turns the routed design into the final layout file; the flow calls it layout generation (`clean_finish`). [S1 §Design Goals]
+The last of the flow's stages is called layout generation, with the clean target `clean_finish`. [S1 §Design Goals]
 
 Its logs are `6_1_merge.log` and `6_report.log`. [S1 §Viewing Results And Logs]
 
@@ -23,7 +23,7 @@ Its logs are `6_1_merge.log` and `6_report.log`. [S1 §Viewing Results And Logs]
 
 - `6_final.gds`, the final layout in [GDSII](../formats/gdsii.md) form. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
 - `6_final.odb`, `6_final.sdc`, `6_final.v`, and `6_final.spef`. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
-- The LibreLane reference flow collects its finished views in a `final` directory, one sub-directory per format (among them `gds`, `def`, `lef`, `lib`, `sdc`, `sdf`, `spef`, and `spice`), with the final metrics alongside. [S2 §Final Results]
+- The LibreLane reference flow has a `final` directory holding several directories with the different layout views (among them `gds`, `def`, `lef`, `lib`, `sdc`, `sdf`, `spef`, and `spice`), with the final metrics alongside. [S2 §Final Results]
 
 ## What happens
 

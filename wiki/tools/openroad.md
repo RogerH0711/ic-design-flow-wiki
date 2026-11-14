@@ -17,15 +17,15 @@ Results can be examined either with commands in a shell or in its graphical inte
 
 ## Role in the flow
 
-The tutorial points to one component per flow step, each documented inside the OpenROAD project. [S1 §Running The Automated RTL-to-GDS Flow]
+The tutorial lists the flow's steps with a link to the documentation of the tool behind each one; most of them are parts of OpenROAD. [S1 §Running The Automated RTL-to-GDS Flow]
 
 - Pdngen does the power planning. [S1 §Power Planning And Analysis]
 - PDNSim is a static IR analyzer for the power grid. [S1 §IR Drop Analysis]
 - ICeWall places I/O cells around the edge of a chip. [S1 §Chip Level IO Pad Placement]
 - TritonRoute is the detailed router. [S1 §Detail Routing]
 - OpenRCX is the parasitics extraction tool. [S1 §Parasitics Extraction]
-- The graphical interface includes a viewer for design rule violations. [S1 §DRC Viewer]
-- The LibreLane reference flow also builds on it: its floorplan and timing analysis steps are OpenROAD steps. [S2 §Run directory]
+- The graphical interface includes a viewer for DRC violations. [S1 §DRC Viewer]
+- The LibreLane reference flow also builds on it: one of its step directories is `13-openroad-floorplan` [S2 §Run directory], and its timing analysis steps are OpenROAD steps. [S2 §STA]
 - The layout of a LibreLane run can be opened in the OpenROAD graphical interface as well. [S2 §Viewing the Layout]
 
 ## Related pages

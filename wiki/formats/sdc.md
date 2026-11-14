@@ -23,7 +23,7 @@ The glossary describes it more broadly, as a format for telling EDA tools the de
 
 - The designer supplies it; the design configuration points to it with `SDC_FILE`. [S1 §Design Configuration]
 - Every stage writes its own copy next to its other results, from `1_synth.sdc` to `6_final.sdc`. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
-- LibreLane steps likewise save the constraints currently applied to the design. [S2 §Run directory]
+- In the LibreLane tutorial's example, a step directory likewise contains the constraints currently on the design. [S2 §Run directory]
 - LibreLane sets some constraints from its configuration, but completing them in a custom SDC file is the designer's job. Separate files can be given for implementation and for signoff, so that implementation can be constrained more tightly than the final analysis. [S3 §Tips for Achieving Timing Closure]
 - Static timing analysis inspects the constraints themselves, for example for ports with no input delay or registers with no clock. [S2 §STA]
 

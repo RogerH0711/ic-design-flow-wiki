@@ -12,7 +12,7 @@ updated: 2026-11-12
 
 In the OpenTitan project, Specification is the first of three broad stages in the life of a design. [S8 §Stages of a Design]
 
-Later stages are judged against it: functional verification checks that the design behaves as expected against the requirements. [S2 §Newcomers' Tutorial]
+Requirements matter later too: functional verification is described as ensuring that the design behaves as expected against the requirements. [S2 §Newcomers' Tutorial]
 
 ## Inputs
 

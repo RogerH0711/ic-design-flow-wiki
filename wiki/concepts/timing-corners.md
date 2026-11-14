@@ -23,8 +23,8 @@ In LibreLane a corner has four components: interconnect, process, voltage, and t
 ## Why it matters
 
 - Analyzing the worst cases is what gives confidence that the chip works under all conditions. [S2 §STA]
-- The slowest case combines a slow process, low voltage, high temperature, and maximum interconnect delay; setup violations are most likely there. [S2 §STA]
-- The fastest case combines a fast process, high voltage, low temperature, and minimum interconnect delay; hold violations are most likely there. [S2 §STA]
+- For instance, a slow process with low voltage, high temperature, and maximum interconnect delay could represent a worst case, in which setup violations are more likely. [S2 §STA]
+- A fast process with high voltage, low temperature, and minimum interconnect delay could represent the fastest scenario, in which hold violations are more likely. [S2 §STA]
 - The flow tutorial pairs them the same way: setup optimization works on the slow corner and hold optimization on the fast corner. [S1 §Timing Optimization Based On Multiple Corners]
 
 ## Related pages

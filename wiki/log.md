@@ -275,3 +275,11 @@ Recorded in `stages/functional-verification.md` (S10 against S2).
   cocotb is.
 - Conflicts: none.
 - All eleven sources are now ingested.
+
+## [2026-11-14] decision | S1 and S2 reviewed after the fact
+
+At the owner's request the two sources ingested before the review step
+existed were reviewed by independent sub-agents: 156 statements and 28
+findings for S1, 125 statements and 22 findings for S2. All fixed. Reports
+in `docs/checks/reviews/S1.md` and `S2.md`. With these, every source has
+been through the same review: 148 findings in total across eleven sources.

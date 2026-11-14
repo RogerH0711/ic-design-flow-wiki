@@ -39,7 +39,7 @@ Also called: PnR, Placement and Routing, Place and Route (all for step 4)
 
 ## Source differences
 
-- Physical implementation: S2 treats floorplanning, placement, clock tree synthesis, and routing as sub-steps of one step [S2 §Newcomers' Tutorial], while S1 treats them as separate stages of the flow, each cleaned and rerun on its own. [S1 §Design Goals]
+- Physical implementation: S2 treats floorplanning, placement, clock tree synthesis, and routing as sub-steps of one step [S2 §Newcomers' Tutorial], while S1 lists floorplanning, macro placement, clock tree synthesis, and routing as individual flow stages, each with its own clean target. [S1 §Design Goals]
 - The end of the flow: S2 ends with a signoff step made of DRC, LVS, STA, and an antenna check [S2 §Signoff Steps], while S1 has no stage called signoff and ends with layout generation. [S1 §Design Goals]
 - The start of the flow: S2 begins at design entry and functional verification [S2 §Newcomers' Tutorial], while S1 begins with finished SystemVerilog files. [S1 §Design Input SystemVerilog]
 

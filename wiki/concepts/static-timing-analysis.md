@@ -13,7 +13,7 @@ Also called: STA
 
 Static timing analysis (STA) finds the timing paths of a design and, at the end of every path, works out when data actually arrives, at the earliest and at the latest, and when it is required to arrive. [S2 §STA]
 
-It makes sure that the circuit will perform its function correctly, but says nothing about whether that function is the right one. [S2 §STA]
+What it guarantees is correct operation of the circuit in time; whether the function itself is the right one is outside its reach. [S2 §STA]
 
 Slack is the margin between the two: for a setup check it is the required arrival time minus the latest actual arrival time, and for a hold check it is the earliest actual arrival time minus the required one. Either must be positive. [S3 §Timing Constraints]
 

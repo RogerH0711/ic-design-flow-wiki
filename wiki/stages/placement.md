@@ -10,12 +10,12 @@ updated: 2026-11-12
 
 ## Purpose
 
-Placement puts the standard cells into the core area. How densely they are packed affects both area and timing. [S1 §Macro Placement]
+The tutorial explores placement options for macros and standard cells and their impact on area and timing; placement density affects how widely the standard cells are spread over the core area. [S1 §Macro Placement]
 
 ## Inputs
 
 - `PLACE_DENSITY`, the desired cell density, where 1 means tightly packed and 0 means widely spread. [S1 §Design Configuration]
-- `CORE_UTILIZATION`, the percentage of the core to be used. [S1 §Design Configuration]
+- `CORE_UTILIZATION`, the core utilization percentage. [S1 §Design Configuration]
 
 ## Outputs
 
@@ -31,7 +31,7 @@ Placement puts the standard cells into the core area. How densely they are packe
 ## Checks
 
 - A placement density heat map shows how spread out the cells are. For `ibex`, raising core utilization from 20 to 40 while lowering placement density from 0.60 to 0.50 spreads the cells more widely. [S1 §Defining Placement Density]
-- Counts of slew, capacitance, and fanout violations are compared before and after repair; in the tutorial's example all 31 are fixed. [S1 §Timing Optimization Using repair_design]
+- The number of maximum slew violations is compared before and after repair; in the tutorial's example all 31 are fixed. [S1 §Timing Optimization Using repair_design]
 
 ## Common problems
 

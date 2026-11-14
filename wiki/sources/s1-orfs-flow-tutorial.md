@@ -19,7 +19,7 @@ Its running example is `ibex`, a 32-bit RISC-V CPU core, implemented in the `sky
 - The flow runs from synthesis to the final `.gds` file through Tcl scripts, with no human intervention needed. [S1 §Running The Automated RTL-to-GDS Flow]
 - A design is described to the flow by a handful of variables: the platform, the top-level module name, the Verilog files, an SDC file, the core utilization, and the placement density. [S1 §Design Configuration]
 - The smallest usable timing constraint is a clock definition. [S1 §Timing Constraints]
-- The flow is cleaned stage by stage with six targets: synthesis, floorplanning, placement, clock tree synthesis, routing, and layout generation (`clean_finish`). [S1 §Design Goals]
+- The flow is cleaned stage by stage with six targets, which the tutorial matches to synthesis, floorplanning, macro placement, clock tree synthesis, routing, and layout generation. [S1 §Design Goals]
 - Log files carry a numeric prefix, from `1_1_yosys.log` to `6_report.log`, that shows where each step sits in the flow. [S1 §Viewing Results And Logs]
 - The flow is automated, but the user can step in to explore and optimize a design for area, timing, and power. [S1 §Understanding and Analyzing OpenROAD Flow Stages and Results]
 - The flow ends by writing a merged final layout file, `6_final.gds`. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
@@ -28,7 +28,7 @@ Its running example is `ibex`, a 32-bit RISC-V CPU core, implemented in the `sky
 
 - Covered in detail: synthesis options, floorplanning, pin and pad placement, power planning, placement, timing optimization, clock tree synthesis, global and detailed routing, antenna checking, metal fill, and parasitics extraction. [S1 §Understanding and Analyzing OpenROAD Flow Stages and Results]
 - Outside its scope: everything before RTL exists. The tutorial starts from finished SystemVerilog files, so specification, RTL writing, and functional verification are not discussed. [S1 §Design Input SystemVerilog]
-- Design rule checking appears only as a viewer for violations left after routing. [S1 §DRC Viewer]
+- DRC is mentioned in passing, as an engine inside the detailed router and as a viewer for violations left after routing, but is not explained. [S1 §DRC Viewer]
 
 ## Related pages
 

@@ -41,8 +41,8 @@ It is the first stage of the automated RTL-to-GDSII flow. [S1 §Running The Auto
 ## Checks
 
 - `synth_check.txt` collects the warnings and errors raised during synthesis. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
-- In the LibreLane reference flow, synthesis is followed directly by checkers for unmapped cells, for synthesis problems, and for assign statements left in the netlist. [S2 §Run directory]
-- The effect of an area-oriented synthesis should be judged after [floorplanning](floorplanning.md), because later timing repair enlarges the design to meet timing whatever netlist synthesis produced. [S1 §Area And Timing Optimization]
+- In a LibreLane run, the synthesis step directory is followed by `07-checker-yosysunmappedcells`, `08-checker-yosyssynthchecks`, and `09-checker-netlistassignstatements`. [S2 §Run directory]
+- The tutorial advises checking the area results after [floorplanning](floorplanning.md), and notes that the design-repair step will increase area to meet timing whatever netlist synthesis produced. [S1 §Area And Timing Optimization]
 
 - The synthesis results are verified again by simulation, and whenever the design description changes, synthesis is rerun and re-verified. [S5 §Script-based synthesis flows]
 

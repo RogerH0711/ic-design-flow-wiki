@@ -28,7 +28,7 @@ The flow has a repair step for each kind of violation. [S1 §Timing Optimization
 - Timing is one of the stated design goals; for the `ibex` example it is a clock period that must be met. [S1 §Design Goals]
 - Setup and hold are analyzed at different [timing corners](timing-corners.md): setup optimization uses the slow corner and hold optimization uses the fast corner. [S1 §Timing Optimization Based On Multiple Corners]
 - Repairing a hold violation by adding buffers can create a setup violation, so by default the repair step will not do that. [S1 §Timing Optimization Using repair_timing]
-- A setup violation can also be removed by lengthening the clock period, that is, by lowering the clock frequency. [S1 §Fixing Setup Violations]
+- In the tutorial's example a setup violation is fixed by increasing the clock period and running timing repair again. [S1 §Fixing Setup Violations]
 - The flow repairs such violations automatically after clock tree synthesis and after global routing. [S1 §Fixing Setup Violations]
 
 ## Related pages

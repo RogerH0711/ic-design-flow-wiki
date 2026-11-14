@@ -17,7 +17,7 @@ DEF is an abstract view of the design being worked on. It lists the instantiated
 
 ## Produced by and used by
 
-- Flow steps save the layout in this format next to the database file. [S2 §Run directory]
+- In the tutorial's example, a step directory contains the layout in this format next to the database file. [S2 §Run directory]
 - LVS can take the layout either as GDSII or as DEF together with LEF. [S2 §LVS]
 - Parasitics extraction works from the LEF/DEF model of the routed design. [S1 §Parasitics Extraction]
 

@@ -12,7 +12,9 @@ updated: 2026-11-12
 
 An introduction for readers who already know some digital design. It opens with the steps needed to realize an ASIC, from design entry to signoff, and then introduces LibreLane. [S2 §Newcomers' Tutorial]
 
-The rest is a worked example: a 32-bit multiplier is run through the default flow, and the results are inspected, with most attention on the signoff checks. [S2 §PM32 example]
+Its example design is a 32-bit multiplier. [S2 §PM32 example]
+
+The example is run through the default flow and its results are inspected, with most attention on the signoff checks. [S2 §Signoff Steps]
 
 ## Key points
 
@@ -27,7 +29,7 @@ The rest is a worked example: a 32-bit multiplier is run through the default flo
 
 - Covered in detail: the four signoff checks, what each compares, and how to read their reports. [S2 §Signoff Steps]
 - Covered briefly: the overall list of steps, each in a sentence or two. [S2 §Newcomers' Tutorial]
-- Not explained: what happens inside synthesis, floorplanning, placement, clock tree synthesis, and routing. They appear only as names of step directories. [S2 §Run directory]
+- Synthesis, floorplanning, placement, clock tree synthesis, and routing are each named but get at most a sentence. [S2 §Newcomers' Tutorial]
 
 ## Related pages
 

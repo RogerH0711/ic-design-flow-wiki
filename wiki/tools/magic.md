@@ -16,7 +16,7 @@ It is one of the two tools the reference flow uses for [DRC](../concepts/drc.md)
 ## Role in the flow
 
 - It runs a DRC step at signoff and writes its own report. [S2 §DRC]
-- It is paired with [KLayout](klayout.md) because each tool has blind spots that the other covers. [S2 §DRC]
+- The other DRC step uses [KLayout](klayout.md); both tools have blind spots that the other covers. [S2 §DRC]
 
 - In the SKY130 file type table, Magic is the open tool listed for the DRC deck, for creating mask layout data, and for the abstract cell views, and one of two listed for the LVS deck. [S6 §File Types]
 

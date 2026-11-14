@@ -14,7 +14,7 @@ Signoff is the last phase of implementation: physical and timing verification of
 
 ## Inputs
 
-- The finished layout and the rule file of the process design kit, for [DRC](../concepts/drc.md). [S2 §DRC]
+- The layout and the PDK's DRC deck, for [DRC](../concepts/drc.md). [S2 §DRC]
 - The layout and the schematic, the latter usually as Verilog, for [LVS](../concepts/lvs.md). [S2 §LVS]
 
 ## Outputs
@@ -38,7 +38,7 @@ The reference flow runs four checks. [S2 §Signoff Steps]
 - DRC: any violation makes the flow report an error with the number of violations found. [S2 §DRC]
 - LVS: a clean run ends with the message that the circuits match uniquely. [S2 §LVS]
 - STA: the summary shows, for every corner, the worst setup and hold slack and the number of setup, hold, maximum capacitance, and maximum slew violations. [S2 §STA]
-- Antenna: the summary table lists each violating net and pin with its metal layer. [S2 §Antenna Check]
+- Antenna: the summary table gives, for each violation, the partial and required values and their ratio, with the net, the pin, and the layer. [S2 §Antenna Check]
 
 ## Common problems
 

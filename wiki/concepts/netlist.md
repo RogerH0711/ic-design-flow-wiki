@@ -19,7 +19,7 @@ Seen another way, a netlist is a graph of circuit elements and signals encoded a
 
 - It is what physical implementation turns into a layout. [S2 §Newcomers' Tutorial]
 - It has to be verified too: functional verification is applied to the gate-level netlist as well as to the RTL. [S2 §Newcomers' Tutorial]
-- Flow steps write the current gate-level netlist as Verilog in two forms, one without power connections and one with them. [S2 §Run directory]
+- In the tutorial's example, a step directory contains the current gate-level netlist as Verilog in two forms, one without power connections and one with them. [S2 §Run directory]
 - At signoff, the layout is compared against the schematic, which is usually given as Verilog. [S2 §LVS]
 
 - In LibreLane, a netlist written in Verilog is a gate-level netlist: it models cells under ideal conditions and serves to check logical correctness. A SPICE netlist goes down to the transistor level and can be simulated under various physical conditions. [S4 §Netlist]

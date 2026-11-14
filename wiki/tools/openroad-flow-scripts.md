@@ -22,7 +22,7 @@ It expects a fixed directory structure, which the user should not rearrange. [S1
 - A design configuration names the platform, the top-level module, the Verilog files, the SDC file, and the density targets. [S1 §Design Configuration]
 - Each run fills four directories: `logs`, `results`, `reports`, and `objects`. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
 - Several public process design kits ship with it under `platforms`. [S1 §Viewing OpenROAD-flow-scripts Directory Structure And Results]
-- A run can usually restart from a partial result, and single stages can be cleaned and rerun. [S1 §Design Goals]
+- A run can usually restart from a partial result, and the files of individual stages can be deleted with per-stage clean targets. [S1 §Design Goals]
 
 ## Related pages
 

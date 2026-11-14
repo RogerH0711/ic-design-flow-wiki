@@ -43,7 +43,7 @@ The design is written down in a hardware description language such as Verilog. F
 ## Checks
 
 - [Verilator](../tools/verilator.md) lints the SystemVerilog code it is given as part of its normal use. [S7 §Overview]
-- The reference flow lints the RTL before doing anything else: its first step directories are a lint run followed by checkers for lint errors and warnings. [S2 §Run directory]
+- The first step directories of a LibreLane run are named `01-verilator-lint`, `02-checker-linttimingconstructs`, `03-checker-linterrors`, and `04-checker-lintwarnings`. [S2 §Run directory]
 
 - Even the first check-ins should compile, be free of syntax errors, and follow the coding style guide. [S8 §Initial Skeleton Design]
 

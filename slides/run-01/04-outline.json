@@ -1,7 +1,7 @@
 {
   "deck": "From RTL to GDSII: how a digital chip gets made",
   "audience": "second-year computer science students who know logic gates and flip-flops",
-  "approved_by_owner": null,
+  "approved_by_owner": "2026-11-14, in chat: \"可以\" (no changes requested)",
   "slides": [
     {
       "n": 1,
@@ -140,7 +140,9 @@
         "FP3",
         "FP4",
         "FP5",
-        "FP6"
+        "FP6",
+        "IR1",
+        "TC1"
       ]
     },
     {
@@ -168,7 +170,8 @@
         "T4",
         "T5",
         "T6",
-        "T7"
+        "T7",
+        "T8"
       ]
     },
     {
@@ -196,7 +199,9 @@
         "RT3",
         "RT4",
         "RT5",
-        "RT6"
+        "RT6",
+        "DR1",
+        "AN1"
       ]
     },
     {
@@ -224,7 +229,9 @@
         "SG4",
         "SG5",
         "SG6",
-        "SG7"
+        "SG7",
+        "DR1",
+        "LV1"
       ]
     },
     {
@@ -245,7 +252,17 @@
       "kind": "recap",
       "title": "The whole flow on one page, and what our sources do not cover",
       "purpose": "Recap the ten stages with input and output, and name the four open gaps.",
-      "cards": []
+      "cards": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "SG6",
+        "G1",
+        "G2",
+        "G3"
+      ]
     },
     {
       "n": 20,
@@ -254,5 +271,6 @@
       "purpose": "Five questions the reader should now be able to answer, with the slide that answers each.",
       "cards": []
     }
-  ]
+  ],
+  "changes_after_approval": "Review round 1 (06-review.md): evidence cards added to slides 11, 13, 15, 17 and 19. Titles, purposes, order and slide count are unchanged from the outline the owner approved."
 }

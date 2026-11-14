@@ -863,6 +863,81 @@
         "S4 §timing closure"
       ],
       "point": "Timing closure: a process (S3) or a state (S4)."
+    },
+    {
+      "id": "T8",
+      "page": "concepts/static-timing-analysis.md",
+      "wiki_sentence": "Slack is the margin between the two: for a setup check it is the required arrival time minus the latest actual arrival time, and for a hold check it is the earliest actual arrival time minus the required one. Either must be positive. [S3 §Timing Constraints]",
+      "citations": [
+        "S3 §Timing Constraints"
+      ],
+      "point": "Slack: the margin between required and actual arrival time; must be positive."
+    },
+    {
+      "id": "DR1",
+      "page": "concepts/drc.md",
+      "wiki_sentence": "Design rule checking (DRC) tests the layout against rules set by the chip foundry. A layout must satisfy them to be manufacturable; one example is the minimum allowed spacing between two `met1` shapes. [S2 §DRC]",
+      "citations": [
+        "S2 §DRC"
+      ],
+      "point": "DRC stands for design rule checking."
+    },
+    {
+      "id": "LV1",
+      "page": "concepts/lvs.md",
+      "wiki_sentence": "Layout versus schematic (LVS) compares the layout with the schematic, which is usually in Verilog, and confirms that the connectivity of the two matches. [S2 §LVS]",
+      "citations": [
+        "S2 §LVS"
+      ],
+      "point": "LVS stands for layout versus schematic."
+    },
+    {
+      "id": "AN1",
+      "page": "concepts/antenna-violation.md",
+      "wiki_sentence": "The rule guards against the antenna effect: during fabrication, a long metal wire attached to a transistor gate collects charge, and that charge can damage the gate's thin oxide. [S2 §Antenna Check]",
+      "citations": [
+        "S2 §Antenna Check"
+      ],
+      "point": "Antenna effect: a long wire on a gate collects charge during fabrication and can damage the gate oxide."
+    },
+    {
+      "id": "IR1",
+      "page": "concepts/ir-drop.md",
+      "wiki_sentence": "Supply voltage has to travel through the metal wires of the power grid to reach each standard cell's power pins; the voltage that drops along the way is the IR drop. [S1 §IR Drop Analysis]",
+      "citations": [
+        "S1 §IR Drop Analysis"
+      ],
+      "point": "IR drop: voltage lost in the power grid on the way to the cells."
+    },
+    {
+      "id": "TC1",
+      "page": "concepts/tap-endcap-tie-filler-cells.md",
+      "wiki_sentence": "A tap cell is a non-functional cell that ties the well, the substrate, or both. It is typically used when most or all of the library's standard cells have no such taps of their own. [S1 §Tapcell insertion]",
+      "citations": [
+        "S1 §Tapcell insertion"
+      ],
+      "point": "Tap cell: a non-functional cell that ties the well or substrate."
+    },
+    {
+      "id": "G1",
+      "kind": "gap",
+      "page": "concepts/coverage.md",
+      "section": "Definition",
+      "point": "The sources never define coverage."
+    },
+    {
+      "id": "G2",
+      "kind": "gap",
+      "page": "concepts/standard-cell-library.md",
+      "section": "Definition",
+      "point": "The sources give no general definition of a standard cell library."
+    },
+    {
+      "id": "G3",
+      "kind": "gap",
+      "page": "stages/routing.md",
+      "section": "Inputs",
+      "point": "The sources do not state what routing takes as input."
     }
   ]
 }

@@ -12,7 +12,10 @@ PAGES={
  'concepts/coverage.md':'how verification knows it is done',
  'concepts/timing-violations.md':'setup and hold','concepts/static-timing-analysis.md':'how timing is checked',
  'concepts/clock-skew.md':'why the clock tree matters for hold','concepts/timing-closure.md':'source difference on the term',
- 'concepts/drc.md':'signoff check and a source difference','concepts/lvs.md':'signoff check','concepts/tape-out.md':'end of the flow',
+ 'concepts/drc.md':'signoff check and a source difference',
+ 'concepts/antenna-violation.md':'added after review round 1: the deck used the term without explaining it',
+ 'concepts/ir-drop.md':'added after review round 1: term used on the floorplanning slide',
+ 'concepts/tap-endcap-tie-filler-cells.md':'added after review round 1: term used on the floorplanning slide','concepts/lvs.md':'signoff check','concepts/tape-out.md':'end of the flow',
 }
 (RUN/'01-retrieval.json').write_text(json.dumps({'topic':'How a digital chip gets from RTL to GDSII','entry':'wiki/index.md','pages':[{'page':p,'why':w} for p,w in PAGES.items()]},indent=2)+'\n')
 CARDS=[
@@ -111,7 +114,17 @@ CARDS=[
 ('D3','stages/signoff.md','What signoff refers to','Signoff means three different things in three sources.'),
 ('D4','concepts/drc.md','Where it happens: S2 runs DRC','DRC at signoff (S2) or after routing (S1).'),
 ('D5','concepts/timing-closure.md','What the term names','Timing closure: a process (S3) or a state (S4).'),
+# added after review round 1 (see 06-review.md, teaching notes 2, 3, 5)
+('T8','concepts/static-timing-analysis.md','Slack is the margin between the two','Slack: the margin between required and actual arrival time; must be positive.'),
+('DR1','concepts/drc.md','Design rule checking (DRC) tests the layout','DRC stands for design rule checking.'),
+('LV1','concepts/lvs.md','Layout versus schematic (LVS) compares','LVS stands for layout versus schematic.'),
+('AN1','concepts/antenna-violation.md','The rule guards against the antenna effect','Antenna effect: a long wire on a gate collects charge during fabrication and can damage the gate oxide.'),
+('IR1','concepts/ir-drop.md','the voltage that drops along the way is the IR drop','IR drop: voltage lost in the power grid on the way to the cells.'),
+('TC1','concepts/tap-endcap-tie-filler-cells.md','A tap cell is a non-functional cell','Tap cell: a non-functional cell that ties the well or substrate.'),
 ]
+GAPS=[('G1','concepts/coverage.md','Definition','The sources never define coverage.'),
+('G2','concepts/standard-cell-library.md','Definition','The sources give no general definition of a standard cell library.'),
+('G3','stages/routing.md','Inputs','The sources do not state what routing takes as input.')]
 cards=[]; bad=0
 for cid,page,frag,point in CARDS:
     hits=[it for sec,items in S.sections(S.WIKI/page).items() if sec!='Related pages' for it in items if frag in it]
@@ -119,5 +132,7 @@ for cid,page,frag,point in CARDS:
         print('SELECT-FAIL',cid,page,frag,len(hits)); bad+=1; continue
     s=hits[0]
     cards.append({'id':cid,'page':page,'wiki_sentence':s,'citations':sorted(f"{a} §{b}" for a,b in S.CITATION.findall(s)),'point':point})
+for cid,page,sec,point in GAPS:
+    cards.append({'id':cid,'kind':'gap','page':page,'section':sec,'point':point})
 (RUN/'03-evidence.json').write_text(json.dumps({'cards':cards},indent=2,ensure_ascii=False)+'\n')
 print(len(cards),'cards written;',bad,'selection failures')

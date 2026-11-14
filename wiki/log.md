@@ -283,3 +283,10 @@ existed were reviewed by independent sub-agents: 156 statements and 28
 findings for S1, 125 statements and 22 findings for S2. All fixed. Reports
 in `docs/checks/reviews/S1.md` and `S2.md`. With these, every source has
 been through the same review: 148 findings in total across eleven sources.
+
+## [2026-11-14] gap | Found while reviewing the slide draft
+
+The slide reviewers pointed out terms that the deck takes from stage pages
+and that no wiki page defines, because no ingested source defines them:
+macro, die, core, slew, fanout, buffer (as a general term), resizer. A
+further source would be needed; none is proposed yet.

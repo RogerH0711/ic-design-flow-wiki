@@ -87,6 +87,18 @@
       "why": "signoff check and a source difference"
     },
     {
+      "page": "concepts/antenna-violation.md",
+      "why": "added after review round 1: the deck used the term without explaining it"
+    },
+    {
+      "page": "concepts/ir-drop.md",
+      "why": "added after review round 1: term used on the floorplanning slide"
+    },
+    {
+      "page": "concepts/tap-endcap-tie-filler-cells.md",
+      "why": "added after review round 1: term used on the floorplanning slide"
+    },
+    {
       "page": "concepts/lvs.md",
       "why": "signoff check"
     },

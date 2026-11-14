@@ -1,0 +1,702 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "title": "From RTL to GDSII: how a digital chip gets made",
+      "lead": "A ten-stage tour for students who know logic gates and flip-flops but have never seen a chip design flow.",
+      "bullets": []
+    },
+    {
+      "n": 2,
+      "title": "What you will be able to explain afterwards",
+      "lead": "After this deck you can:",
+      "bullets": [
+        {
+          "text": "Name the stages a design passes through, in order.",
+          "cards": []
+        },
+        {
+          "text": "Say, for each stage, what goes in, what comes out, and what is checked.",
+          "cards": []
+        },
+        {
+          "text": "Explain setup and hold violations, and the four signoff checks.",
+          "cards": []
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "title": "What is an ASIC, and what is a design flow?",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "An ASIC is silicon manufactured to carry out one specific function.",
+          "cards": [
+            "A1"
+          ]
+        },
+        {
+          "text": "The design flow: the steps from an idea to the data used for fabrication.",
+          "cards": [
+            "A2"
+          ]
+        },
+        {
+          "text": "Each step is supported by electronic design automation (EDA) tools.",
+          "cards": [
+            "A2"
+          ]
+        },
+        {
+          "text": "The work can last months; a proven flow keeps it on schedule.",
+          "cards": [
+            "A3"
+          ]
+        },
+        {
+          "text": "From synthesis to the final layout file, it can run automatically.",
+          "cards": [
+            "A4"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "title": "The flow at a glance: five steps",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "Design entry: describe the design in a hardware description language.",
+          "cards": [
+            "F1"
+          ]
+        },
+        {
+          "text": "Functional verification: confirm it behaves as required.",
+          "cards": [
+            "F2"
+          ]
+        },
+        {
+          "text": "Synthesis: convert the description into a netlist.",
+          "cards": [
+            "F3"
+          ]
+        },
+        {
+          "text": "Physical implementation: turn the netlist into a layout by floorplanning, placement, clock tree synthesis, and routing.",
+          "cards": [
+            "F4"
+          ]
+        },
+        {
+          "text": "Signoff: final checks before manufacturing.",
+          "cards": [
+            "F5"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Six words you need first",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "HDL (hardware description language): describes hardware; Verilog is one. RTL (register-transfer level): a high-level way of describing a circuit.",
+          "cards": [
+            "V2",
+            "V1"
+          ]
+        },
+        {
+          "text": "Netlist: standard cells and macros, and their connections.",
+          "cards": [
+            "V3"
+          ]
+        },
+        {
+          "text": "Cell: another name for a CMOS logic gate.",
+          "cards": [
+            "V4"
+          ]
+        },
+        {
+          "text": "A standard cell library typically has several sizes of one cell.",
+          "cards": [
+            "V5"
+          ]
+        },
+        {
+          "text": "PDK (process design kit): files that describe one fabrication process to the tools.",
+          "cards": [
+            "V6"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Stage 1: Specification",
+      "lead": "One project's process (OpenTitan): the first of three broad stages.",
+      "bullets": [
+        {
+          "text": "A concept is written up as a brief proposal and goes through a request for comment.",
+          "cards": [
+            "SP2"
+          ]
+        },
+        {
+          "text": "After review, the full detailed specification is completed.",
+          "cards": [
+            "SP3"
+          ]
+        },
+        {
+          "text": "It is published to the wider team and refined from their comments.",
+          "cards": [
+            "SP4"
+          ]
+        },
+        {
+          "text": "Checked by: up to three reviews, one a potential security review.",
+          "cards": [
+            "SP5"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Stage 2: RTL design",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "The design is written in an HDL such as Verilog, normally at RTL.",
+          "cards": [
+            "R1"
+          ]
+        },
+        {
+          "text": "Only a subset of Verilog can be synthesized.",
+          "cards": [
+            "R2"
+          ]
+        },
+        {
+          "text": "Clocked logic uses non-blocking assignments; purely combinational logic uses blocking ones.",
+          "cards": [
+            "R3"
+          ]
+        },
+        {
+          "text": "Flip-flops are used in place of latches unless a latch is absolutely necessary.",
+          "cards": [
+            "R4"
+          ]
+        },
+        {
+          "text": "Risk: simulation and synthesis disagreeing.",
+          "cards": [
+            "R6"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "title": "Stage 3: Functional verification",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "Goal: the design under test (DUT) behaves as its requirements say.",
+          "cards": [
+            "FV1",
+            "FV8"
+          ]
+        },
+        {
+          "text": "Simulation and formal verification are combined.",
+          "cards": [
+            "FV2"
+          ]
+        },
+        {
+          "text": "Both the RTL and, later, the gate-level netlist are verified.",
+          "cards": [
+            "FV3"
+          ]
+        },
+        {
+          "text": "Testing starts with a basic smoke test; stress tests exercise several features at once. All simulations run regularly as a regression.",
+          "cards": [
+            "FV4",
+            "FV5",
+            "FV6"
+          ]
+        },
+        {
+          "text": "In OpenTitan, done: every checklist item of every verification stage is ticked.",
+          "cards": [
+            "FV7",
+            "FV8"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "title": "When have we tested enough? Coverage",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "Coverage answers the question of when testing is done.",
+          "cards": [
+            "C4"
+          ]
+        },
+        {
+          "text": "Code coverage: extracted automatically by the simulator from lines, branches, and other structures.",
+          "cards": [
+            "C1",
+            "C2"
+          ]
+        },
+        {
+          "text": "Functional coverage: cover points that an engineer has to write.",
+          "cards": [
+            "C3"
+          ]
+        },
+        {
+          "text": "Full code coverage shows all code ran, not that it does the right thing; both kinds are needed.",
+          "cards": [
+            "C5"
+          ]
+        },
+        {
+          "text": "Gaps are closed with more tests or waived: coverage closure.",
+          "cards": [
+            "C6"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "title": "Stage 4: Logic synthesis",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "In: the Verilog files and the timing constraints (an SDC file).",
+          "cards": [
+            "LS5",
+            "LS6"
+          ]
+        },
+        {
+          "text": "Software turns a higher-level description into a lower-level one that behaves the same.",
+          "cards": [
+            "LS1"
+          ]
+        },
+        {
+          "text": "Out: a netlist, a circuit built from logic cells.",
+          "cards": [
+            "LS2"
+          ]
+        },
+        {
+          "text": "Two challenges: optimize the netlist, and map it onto gate types that physically exist.",
+          "cards": [
+            "LS3"
+          ]
+        },
+        {
+          "text": "Optimization can target area or timing; results are verified again by simulation.",
+          "cards": [
+            "LS4",
+            "LS7"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "title": "Stage 5: Floorplanning",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "In: a size target for the design.",
+          "cards": [
+            "FP1"
+          ]
+        },
+        {
+          "text": "I/O pins are placed on the boundary.",
+          "cards": [
+            "FP2"
+          ]
+        },
+        {
+          "text": "Macros are placed, and tap cells are added: non-functional cells that tie the well or substrate.",
+          "cards": [
+            "FP3",
+            "FP4",
+            "TC1"
+          ]
+        },
+        {
+          "text": "A power grid is created.",
+          "cards": [
+            "FP5"
+          ]
+        },
+        {
+          "text": "Checked by: IR drop analysis. IR drop is the voltage lost in the power grid on the way to the cells.",
+          "cards": [
+            "FP6",
+            "IR1"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "title": "Stage 6: Placement",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "In: a placement density, from 0 (widely spread) to 1 (tightly packed).",
+          "cards": [
+            "PL2"
+          ]
+        },
+        {
+          "text": "The flow's steps include global placement, detailed placement, and timing optimization with a resizer.",
+          "cards": [
+            "PL3"
+          ]
+        },
+        {
+          "text": "A repair step inserts buffers to fix maximum slew, capacitance, and fanout violations, and resizes gates.",
+          "cards": [
+            "PL4"
+          ]
+        },
+        {
+          "text": "Placement options affect area and timing.",
+          "cards": [
+            "PL1"
+          ]
+        },
+        {
+          "text": "Side effect: timing optimization enlarges the design.",
+          "cards": [
+            "PL5"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "title": "Timing in one slide: setup, hold, slack",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "A flip-flop needs stable input before the clock edge (setup time) and after (hold time).",
+          "cards": [
+            "T4"
+          ]
+        },
+        {
+          "text": "Setup violation: data arrives after it is required. Hold: before.",
+          "cards": [
+            "T2",
+            "T3"
+          ]
+        },
+        {
+          "text": "Slack: the margin between required and actual arrival time; it must be positive.",
+          "cards": [
+            "T8"
+          ]
+        },
+        {
+          "text": "A violation shows up as negative slack; the flip-flop can go metastable.",
+          "cards": [
+            "T1",
+            "T6"
+          ]
+        },
+        {
+          "text": "Static timing analysis (STA) computes these times on every path.",
+          "cards": [
+            "T5"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "title": "Stage 7: Clock tree synthesis",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "In: the placed design. Out: a well-balanced clock tree.",
+          "cards": [
+            "CT1"
+          ]
+        },
+        {
+          "text": "Clock buffers are inserted to balance the tree.",
+          "cards": [
+            "CT2"
+          ]
+        },
+        {
+          "text": "Clock skew: the clock arrives at different flip-flops at different times.",
+          "cards": [
+            "CT5"
+          ]
+        },
+        {
+          "text": "Skew is the main cause of hold violations, so it is reported and fixed.",
+          "cards": [
+            "CT6",
+            "CT3"
+          ]
+        },
+        {
+          "text": "Timing repair for setup and hold runs after this stage.",
+          "cards": [
+            "CT4"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "title": "Stage 8: Routing",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "Two passes: a design must pass global routing without violations before detailed routing.",
+          "cards": [
+            "RT1"
+          ]
+        },
+        {
+          "text": "Global routing allocates the routing resources.",
+          "cards": [
+            "RT2"
+          ]
+        },
+        {
+          "text": "Detailed routing includes search and repair and its own DRC (design rule checking) engine.",
+          "cards": [
+            "RT3",
+            "DR1"
+          ]
+        },
+        {
+          "text": "Checked by: zero violations, and an antenna check: a long wire can collect charge during fabrication and damage a transistor gate.",
+          "cards": [
+            "RT4",
+            "RT6",
+            "AN1"
+          ]
+        },
+        {
+          "text": "Problem: congestion stops global routing.",
+          "cards": [
+            "RT5"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "title": "Stage 9: Layout finishing",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "The automated flow calls its last stage layout generation.",
+          "cards": [
+            "LF5"
+          ]
+        },
+        {
+          "text": "Metal fill adds floating metal shapes so that density rules are met.",
+          "cards": [
+            "LF1"
+          ]
+        },
+        {
+          "text": "Parasitics extraction computes the resistance and capacitance of the routed wires.",
+          "cards": [
+            "LF2"
+          ]
+        },
+        {
+          "text": "Out: the final layout in GDSII form.",
+          "cards": [
+            "LF3"
+          ]
+        },
+        {
+          "text": "Final timing is reported as worst slack, total negative slack, and worst negative slack.",
+          "cards": [
+            "LF4"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 17,
+      "title": "Stage 10: Signoff",
+      "lead": "Physical and timing verification before manufacturing.",
+      "bullets": [
+        {
+          "text": "DRC (design rule checking): the layout against the foundry's manufacturing rules.",
+          "cards": [
+            "SG2",
+            "DR1"
+          ]
+        },
+        {
+          "text": "LVS (layout versus schematic): both have the same connectivity.",
+          "cards": [
+            "SG3",
+            "LV1"
+          ]
+        },
+        {
+          "text": "STA: on the fully implemented design.",
+          "cards": [
+            "SG4"
+          ]
+        },
+        {
+          "text": "Antenna check: looks for antenna violations.",
+          "cards": [
+            "SG5"
+          ]
+        },
+        {
+          "text": "Then tape-out: the design goes to a fabrication facility.",
+          "cards": [
+            "SG6"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "title": "Where the sources disagree",
+      "lead": "S1, S2, … are the sources under each slide.",
+      "bullets": [
+        {
+          "text": "Physical implementation: one step (S2), or separate stages (S1).",
+          "cards": [
+            "D1"
+          ]
+        },
+        {
+          "text": "The end: signoff (S2), or no stage of that name (S1).",
+          "cards": [
+            "D2"
+          ]
+        },
+        {
+          "text": "Signoff: layout checks (S2), a verification review (S10), a project stage (S8).",
+          "cards": [
+            "D3"
+          ]
+        },
+        {
+          "text": "DRC: a signoff step (S2), or a post-routing report (S1).",
+          "cards": [
+            "D4"
+          ]
+        },
+        {
+          "text": "Timing closure: a process (S3), or a state (S4).",
+          "cards": [
+            "D5"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 19,
+      "title": "The whole flow on one page, and what our sources do not cover",
+      "lead": "The flow in four sentences, and what is missing.",
+      "bullets": [
+        {
+          "text": "Describe the design in a hardware description language and verify it.",
+          "cards": [
+            "F1",
+            "F2"
+          ]
+        },
+        {
+          "text": "Synthesis converts the description into a netlist.",
+          "cards": [
+            "F3"
+          ]
+        },
+        {
+          "text": "Physical implementation turns the netlist into a layout.",
+          "cards": [
+            "F4"
+          ]
+        },
+        {
+          "text": "Signoff checks the layout; then tape-out.",
+          "cards": [
+            "F5",
+            "SG6"
+          ]
+        },
+        {
+          "text": "Gaps in our sources: no definition of coverage or of a standard cell library; nothing on routing inputs.",
+          "cards": [
+            "G1",
+            "G2",
+            "G3"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "title": "Check yourself",
+      "lead": "",
+      "bullets": [
+        {
+          "text": "What does synthesis take in, and what does it produce? (slide 10)",
+          "cards": []
+        },
+        {
+          "text": "Which arrives too late: data in a setup or a hold violation? (slide 13)",
+          "cards": []
+        },
+        {
+          "text": "What is clock skew, and which violation is it the main cause of? (slide 14)",
+          "cards": []
+        },
+        {
+          "text": "Which signoff check compares layout with schematic? (slide 17)",
+          "cards": []
+        },
+        {
+          "text": "Why are both kinds of coverage needed? (slide 9)",
+          "cards": []
+        }
+      ]
+    }
+  ]
+}

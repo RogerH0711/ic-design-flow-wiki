@@ -123,6 +123,12 @@ def check_evidence(run, err):
         if c["page"] not in allowed:
             err(f"{cid}: page {c['page']} was not retrieved at node 1")
             continue
+        if c.get("kind") == "gap":
+            # A gap card is evidence that the wiki says nothing: the named
+            # section of the page must carry the gap marker.
+            if GAP not in sections(page).get(c.get("section", ""), []):
+                err(f"{cid}: no gap marker in section '{c.get('section')}' of {c['page']}")
+            continue
         text = flat(page.read_text(encoding="utf-8"))
         sentence = flat(c["wiki_sentence"])
         if sentence not in text:
